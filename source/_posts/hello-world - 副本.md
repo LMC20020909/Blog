@@ -9,3 +9,5 @@ index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20211203_bg2
 这里是自动部署博客的测试内容，但愿成功！！！！
 
 自动部署成功辣，现在测试多端 push
+
+多端 push 成功，现在测试修复博客文章时间顺序 bug
