@@ -2,55 +2,55 @@
 name: Hexo Blog CI
 
 # master branch on push, auto run
-on: 
+on:
   push:
     branches:
       - main
-      
-jobs:
-  build: 
-    runs-on: ubuntu-latest 
-        
-    steps:
-    # check it to your workflow can access it
-    # from: https://github.com/actions/checkout
-    - name: Checkout Repository master branch
-      uses: actions/checkout@main
-      with:
-        fetch-depth: 0
 
-    - name: Restore file modification time
-      run: |
-        git config --global core.quotepath false
-        git ls-files -z | while read -d '' path; do touch -d $(git log -1 --format="@%ct" "$path") "$path"; done
-      
-    # from: https://github.com/actions/setup-node  
-    - name: Setup Node.js
-      uses: actions/setup-node@main
-      # with:
-      #   node-version: "10.x"
-    
-    - name: Setup Hexo Dependencies
-      run: |
-        npm install hexo-cli -g
-        npm install
-    
-    - name: Setup Deploy Private Key
-      env:
-        HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY_DELL_RSA }}
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        
-    - name: Setup Git Infomation
-      run: | 
-        git config --global user.name 'lmc20020909' 
-        git config --global user.email '2724905898@qq.com'
-    
-    - name: Deploy Hexo 
-      run: |
-        hexo clean
-        hexo generate 
-        hexo deploy
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # check it to your workflow can access it
+      # from: https://github.com/actions/checkout
+      - name: Checkout Repository master branch
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Restore file modification time
+        run: |
+          git config --global core.quotepath false
+          find source -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
+
+      # from: https://github.com/actions/setup-node
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        # with:
+        #   node-version: "10.x"
+
+      - name: Setup Hexo Dependencies
+        run: |
+          npm install hexo-cli -g
+          npm install
+
+      - name: Setup Deploy Private Key
+        env:
+          HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY_DELL_RSA }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Setup Git Infomation
+        run: |
+          git config --global user.name 'lmc20020909' 
+          git config --global user.email '2724905898@qq.com'
+
+      - name: Deploy Hexo
+        run: |
+          hexo clean
+          hexo generate 
+          hexo deploy
