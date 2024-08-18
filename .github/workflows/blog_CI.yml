@@ -17,7 +17,12 @@ jobs:
     - name: Checkout Repository master branch
       uses: actions/checkout@main
       with:
-        fetch-depth: '0'
+        fetch-depth: 0
+
+    - name: Restore file modification time
+      run: |
+        git config --global core.quotepath false
+        git ls-files -z | while read -d '' path; do touch -d $(git log -1 --format="@%ct" "$path") "$path"; done
       
     # from: https://github.com/actions/setup-node  
     - name: Setup Node.js
@@ -43,11 +48,6 @@ jobs:
       run: | 
         git config --global user.name 'lmc20020909' 
         git config --global user.email '2724905898@qq.com'
-    
-    - name: Restore file modification time
-      run: |
-        git config --global core.quotepath false
-        git ls-files --directory source | while read path; do touch -d "$(git log -1 --format='@%ct' $path)" "$path"; done
     
     - name: Deploy Hexo 
       run: |
