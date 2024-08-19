@@ -132,22 +132,25 @@ jobs:
 
 > 这是一个使用 GitHub Actions 实现 Hexo 博客持续集成（CI）的脚本。下面是对每个部分的详细解释：
 >
-> ### 1. Workflow 名称
+> **1. Workflow 名称**
+>
 > ```yaml
 > name: Hexo Blog CI
 > ```
 > 这部分为工作流命名为 "Hexo Blog CI"，表示这是用于 Hexo 博客的持续集成工作流。
 >
-> ### 2. 触发条件
+> **2. 触发条件**
+>
 > ```yaml
 > on:
->   push:
->     branches:
+> push:
+>  branches:
 >       - main
 > ```
 > 这个部分定义了工作流的触发条件。它会在推送到 `main` 分支时自动运行。这意味着每当你向 `main` 分支提交更改时，工作流都会被触发。
 >
-> ### 3. Jobs 部分
+> **3. Jobs 部分**
+>
 > ```yaml
 > jobs:
 >   build:
@@ -155,21 +158,24 @@ jobs:
 > ```
 > `jobs` 部分定义了实际运行的任务。这里定义了一个名为 `build` 的任务，使用的是 `ubuntu-latest` 环境。
 >
-> #### 3.1 检出仓库
+> **3.1 检出仓库**
+>
 > ```yaml
 > - name: Checkout Repository
 >   uses: actions/checkout@v2
 > ```
 > 这一步使用 `actions/checkout@v2` 检出你的 GitHub 仓库代码。这使得工作流能够访问并操作你项目的代码。
 >
-> #### 3.2 设置 Node.js 环境
+> **3.2 设置 Node.js 环境**
+>
 > ```yaml
 > - name: Setup Node.js
 >   uses: actions/setup-node@main
 > ```
 > 这一步使用 `actions/setup-node@main` 设置 Node.js 环境，确保工作流可以使用 Node.js 运行 Hexo 命令。
 >
-> #### 3.3 安装 Hexo 依赖项
+> **3.3 安装 Hexo 依赖项**
+>
 > ```yaml
 > - name: Setup Hexo Dependencies
 >   run: |
@@ -178,7 +184,8 @@ jobs:
 > ```
 > 这一部分通过 `npm` 安装 Hexo 命令行工具和项目依赖项。这一步为 Hexo 的生成和部署提供了必要的环境。
 >
-> #### 3.4 设置部署私钥
+> **3.4 设置部署私钥**
+>
 > ```yaml
 > - name: Setup Deploy Private Key
 >   env:
@@ -191,7 +198,8 @@ jobs:
 > ```
 > 此步骤用于配置 SSH 私钥，以便工作流能够通过 SSH 连接到 GitHub，并将生成的内容推送到你的博客仓库中。密钥保存在 GitHub Secrets 中，以确保安全性。
 >
-> #### 3.5 配置 Git 用户信息
+> **3.5 配置 Git 用户信息**
+>
 > ```yaml
 > - name: Setup Git Infomation
 >   run: |
@@ -200,7 +208,8 @@ jobs:
 > ```
 > 这一步配置了 Git 用户名和邮箱信息，确保在部署过程中 Git 提交有正确的用户信息。
 >
-> #### 3.6 部署 Hexo
+> **3.6 部署 Hexo**
+>
 > ```yaml
 > - name: Deploy Hexo
 >   run: |
@@ -213,7 +222,8 @@ jobs:
 > - `hexo generate` 生成静态文件。
 > - `hexo deploy` 将生成的文件部署到远程服务器（通常是 GitHub Pages）。
 >
-> ### 总结
+> **总结**
+>
 > 通过上述工作流脚本，你可以在每次推送到 `main` 分支时自动生成和部署 Hexo 博客。这使得博客的更新变得自动化和更加便捷。
 
 最后点击提交 commit 即可。
@@ -264,14 +274,16 @@ jobs:
 
 > 这些被注释掉的代码片段是工作流中的可选步骤，分别与仓库的检出配置和文件的修改时间恢复有关。以下是对每个部分的解释：
 >
-> ### 1. 可选的仓库检出配置
+> **1. 可选的仓库检出配置**
+>
 > ```yaml
 > #   with:
 > #     fetch-depth: 0
 > ```
 > 这个部分是 `actions/checkout@v2` 步骤的可选配置项。`fetch-depth: 0` 表示在检出代码时，克隆整个 Git 历史记录，而不仅仅是最新的提交。默认情况下，`actions/checkout` 只会克隆最近的一个提交，以节省时间和带宽。如果你需要访问整个提交历史（例如在运行特定的 Git 命令或生成变更日志时），你可以取消注释这一部分并设置 `fetch-depth` 为 `0`。
 >
-> ### 2. 恢复文件的修改时间
+> **2. 恢复文件的修改时间**
+>
 > ```yaml
 > # - name: Restore file modification time
 > #   run: |
@@ -288,7 +300,8 @@ jobs:
 >
 > 这一部分的作用是在一些情况下保持文件的修改时间与 Git 提交历史一致，可能对 Hexo 的文件生成逻辑有影响。如果 Hexo 或其他系统依赖于文件的修改时间来决定是否更新某些内容，这一步可能是必要的。
 >
-> ### 总结
+> **总结**
+>
 > 这些被注释的代码片段是为了在特定需求下更灵活地配置工作流。如果你需要完整的 Git 历史或准确的文件修改时间戳，可以考虑取消注释并使用这些选项。
 
 然而这对我并没有用，时间信息并没有恢复。于是我尝试了第一种方式，为所有的文章添加一个 `updated`字段，标识文件的修改时间。当然，这一步需要在老电脑上操作，因为这些文件的基础信息保存在最初的系统上，而在新电脑上 clone 下来的文件的修改时间都是 clone 的时间。
@@ -303,7 +316,7 @@ jobs:
 
 果然，名正言顺则事可成。这个问题算是解决了。
 
-附上批处理添加`Date`字段的 python 代码：
+最后附上批处理添加`Date`字段的 python 代码：
 
 ```python
 import os
