@@ -5,8 +5,8 @@ updated: 2024-08-19 17:47:30
 excerpt: 利用 GitHub Actions 实现博客自动化部署并多端同步
 categories: 博客
 tags: [博客,github,教程]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240819_bg5.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240819_bg5.jpg
+index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240819_bg1.png
+banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240819_bg1.png
 ---
 
 最近新配了一台主机，加上 macbook 和老笔记本一共就有了三台设备。俗话说得好，有新的不用旧的，这个博客的环境和数据都保存在老笔记本上，每次想发点什么东西还要特意打开它，十分麻烦。加上三台电脑一般被我放在三个地方，于是就有了随时随地写、随时随地发的需求。本来想的是将博客移植到新主机上面去，但在搜索攻略的时候发现有一种能够免配环境、自动部署、多端同步的处理方式正合我意，毕竟处于需求隔离的想法，暂时还不是很想对另外两台设备动过多的手脚。
