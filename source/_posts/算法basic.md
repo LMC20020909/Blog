@@ -1,5 +1,6 @@
 ---
 title: 算法basic
+updated: 2023-02-24 19:00:42
 categories: 算法
 tags: [算法]
 excerpt: 一些最最basic的东西

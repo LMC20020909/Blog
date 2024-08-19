@@ -1,5 +1,6 @@
 ---
 title: 记录一下git出现的奇怪错误 
+updated: 2022-11-14 16:26:51
 categories: bug
 tags: [bug, git, github]
 excerpt: 突然git push不上去了...

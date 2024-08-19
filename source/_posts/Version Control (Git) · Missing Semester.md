@@ -1,5 +1,6 @@
 ---
 title: Version Control (Git) · Missing Semester
+updated: 2024-04-07 20:06:33
 categories: [教程, git]
 tags: [教程, git, MIT-Missing-Semester]
 excerpt: MIT-Missing-Semester Lecture 6 - Version Control(git)(2020)

@@ -1,5 +1,6 @@
 ---
 title: ubuntu22.04安装MySQL8.0(无root权限)
+updated: 2023-03-10 18:19:27
 categories: [教程, server]
 tags: [教程, server,Linux,MySQL]
 excerpt: 在没有root权限的服务器(ubuntu22.04)上安装MySQL8.0，主要区别是不能使用sudo命令

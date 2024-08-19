@@ -1,5 +1,6 @@
 ---
 title: Linux配置SSH Key到GitHub 
+updated: 2023-01-07 21:50:57
 categories: [教程, server]
 tags: [教程, server, linux, git, github]
 excerpt: 总体上和windows差不多，但出了点小问题。

@@ -1,5 +1,6 @@
 ---
 title: pip 换源
+updated: 2023-12-23 11:58:01
 categories: [教程, python]
 tags: [教程, python, pip]
 excerpt: 永久换源，一劳永逸

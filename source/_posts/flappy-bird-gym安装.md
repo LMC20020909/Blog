@@ -1,5 +1,6 @@
 ---
 title: flappy-bird-gym环境安装
+updated: 2023-07-21 10:41:31
 categories: [教程, RL]
 tags: [教程, RL, gym]
 index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230428_bg3.png

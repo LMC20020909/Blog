@@ -1,5 +1,6 @@
 ---
 title: 微信小程序open-type="chooseAvatar"真机调试无法授权头像的问题
+updated: 2023-01-02 14:53:47
 categories: bug
 tags: [bug, uniapp, 小程序, font-end]
 excerpt: 如题，开发者工具本地没问题，真机调试格式错乱，无法授权头像

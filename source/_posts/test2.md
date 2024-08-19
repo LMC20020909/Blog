@@ -1,6 +1,6 @@
 ---
 title: test2
-date: 2024-08-19 01:01:42
+updated: 2024-08-19 01:01:42
 updated: 2024-08-19 01:01:42
 categories: 博客
 tags: 博客
