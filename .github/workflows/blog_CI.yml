@@ -1,7 +1,7 @@
 # workflow name
 name: Hexo Blog CI
 
-# master branch on push, auto run
+# main branch on push, auto run
 on:
   push:
     branches:
@@ -14,21 +14,19 @@ jobs:
     steps:
       # check it to your workflow can access it
       # from: https://github.com/actions/checkout
-      - name: Checkout Repository master branch
+      - name: Checkout Repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      #   with:
+      #     fetch-depth: 0
 
-      - name: Restore file modification time
-        run: |
-          git config --global core.quotepath false
-          find source -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
+      # - name: Restore file modification time
+      #   run: |
+      #     git config --global core.quotepath false
+      #     find source -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
 
       # from: https://github.com/actions/setup-node
       - name: Setup Node.js
         uses: actions/setup-node@main
-        # with:
-        #   node-version: "10.x"
 
       - name: Setup Hexo Dependencies
         run: |
