@@ -1,5 +1,6 @@
 ---
 title: ubuntu22.04安装MySQL8.0并远程连接(有root权限)
+date: 2023-03-08 19:40:39
 updated: 2023-03-08 19:40:39
 categories: [教程, server]
 tags: [教程, server,Linux,MySQL]

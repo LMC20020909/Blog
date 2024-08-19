@@ -1,5 +1,6 @@
 ---
 title: WordNet使用简介
+date: 2023-04-28 12:32:29
 updated: 2023-04-28 12:32:29
 categories: [教程, NLP]
 tags: [教程, NLP, WordNet]

@@ -1,5 +1,6 @@
 ---
 title: CI Test
+date: 2024-08-19 00:31:19
 updated: 2024-08-19 00:31:19
 categories: 博客
 tags: 博客

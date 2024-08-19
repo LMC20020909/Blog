@@ -1,5 +1,6 @@
 ---
 title: ubuntu 安装 tensorflow
+date: 2023-12-23 11:58:01
 updated: 2023-12-23 11:58:01
 categories: [教程, server]
 tags: [教程, server, tensorflow, linux]

@@ -1,5 +1,6 @@
 ---
 title: flappy-bird-gym环境安装
+date: 2023-07-21 10:41:31
 updated: 2023-07-21 10:41:31
 categories: [教程, RL]
 tags: [教程, RL, gym]

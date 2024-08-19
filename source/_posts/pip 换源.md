@@ -1,5 +1,6 @@
 ---
 title: pip 换源
+date: 2023-12-23 11:58:01
 updated: 2023-12-23 11:58:01
 categories: [教程, python]
 tags: [教程, python, pip]

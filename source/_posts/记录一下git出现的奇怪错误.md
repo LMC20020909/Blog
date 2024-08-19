@@ -1,5 +1,6 @@
 ---
 title: 记录一下git出现的奇怪错误 
+date: 2022-11-14 16:26:51
 updated: 2022-11-14 16:26:51
 categories: bug
 tags: [bug, git, github]

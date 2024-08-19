@@ -1,5 +1,6 @@
 ---
 title: CSAPP阅读札记——第二章
+date: 2023-04-23 15:55:55
 updated: 2023-04-23 15:55:55
 excerpt: 第二章——信息的表示和处理
 categories: [札记, CSAPP]
