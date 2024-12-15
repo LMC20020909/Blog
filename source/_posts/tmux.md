@@ -25,15 +25,15 @@ tmux 分为三个层次：***session*** (会话), ***window*** (窗口), ***pane
 
 1. 不需要指定名字，随便新建一个：
 
-  ```bash
-  tmux
-  ```
+   ```bash
+   tmux
+   ```
 
   或者：
 
-  ```bash
-  tmux new
-  ```
+   ```bash
+   tmux new
+   ```
 
 2. 新建并取名
 
@@ -121,9 +121,9 @@ Ctrl B + C
 
 1. 下一个
 
-  ```bash
-  Ctrl B + N
-  ```
+   ```bash
+   Ctrl B + N
+   ```
 
 2. 上一个
 
@@ -165,9 +165,9 @@ pane 是从属于 window 的面板，一个 window 可以切分成多个 pane
 
 1. 左右切分面板
 
-  ```bash
-  Ctrl B + %
-  ```
+   ```bash
+   Ctrl B + %
+   ```
 
 2. 上下切分面板
 
@@ -179,9 +179,9 @@ pane 是从属于 window 的面板，一个 window 可以切分成多个 pane
 
 1. 方向键切换
 
-  ```bash
-  Ctrl B + 方向键
-  ```
+   ```bash
+   Ctrl B + 方向键
+   ```
 
 2. 根据序号切换
 
