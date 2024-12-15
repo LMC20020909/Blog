@@ -28,12 +28,13 @@ tmux 分为三个层次：***session*** (会话), ***window*** (窗口), ***pane
    ```bash
    tmux
    ```
-
-  或者：
-
+   
+   或者：
+   
    ```bash
    tmux new
    ```
+
 
 2. 新建并取名
 
