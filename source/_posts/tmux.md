@@ -204,6 +204,14 @@ pane 是从属于 window 的面板，一个 window 可以切分成多个 pane
 Ctrl B + X
 ```
 
+**多窗格同步输入**
+
+```bash
+Ctrl B : set synchronize-panes
+```
+
+多个窗格同步输入切换，设置一次同步输入，再设置一次关闭同步输入
+
 
 
 # Configuration
@@ -226,3 +234,15 @@ Ctrl B + X
    ```
 
    第一条配置是启用鼠标，第二条是启用 vim 风格的复制模式，可以方便进行复制粘贴。此时用鼠标滚轮选中 tmux 中的任何输出就会默认复制到剪贴板。
+
+### 绑定快捷键
+
+比如**多窗格同步输入**命令太长了，就可以使用绑定快捷键实现简单的命令
+
+```bash
+vim ~/.tmux.conf
+bind-key s setw synchronize-panes
+source ~/.tmux.conf
+```
+
+让快捷键 Ctrl B + S 快捷键来实现窗格同步输入的切换。
