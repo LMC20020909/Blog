@@ -1,7 +1,7 @@
 ---
 title: Linux 有用且有趣的命令汇总
-date: 2024-12-15
-updated: 2024-12-15
+date: 2024-12-16
+updated: 2024-12-16
 excerpt: Linux 有用且有趣的命令汇总，如检测 gpu 状态、查看空间大小等
 categories: [教程,server]
 tags: [教程,server,linux]
