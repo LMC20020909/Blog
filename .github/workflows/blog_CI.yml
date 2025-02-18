@@ -10,7 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       # check it to your workflow can access it
       # from: https://github.com/actions/checkout
