@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/icon/Mingchen%20Liu.png">
-  <link rel="icon" href="/blog/img/icon/Mingchen%20Liu.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon/Mingchen%20Liu.png">
+  <link rel="icon" href="/img/icon/Mingchen%20Liu.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="在没有root权限的服务器(ubuntu22.04)上安装MySQL8.0，主要区别是不能使用sudo命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu22.04安装MySQL8.0(无root权限)">
-<meta property="og:url" content="https://lmc20020909.github.io/blog/ubuntu22.04%E5%AE%89%E8%A3%85MySQL8.0(%E6%97%A0root%E6%9D%83%E9%99%90)/index.html">
+<meta property="og:url" content="https://blog.mingchenliu.com/ubuntu22.04%E5%AE%89%E8%A3%85MySQL8.0(%E6%97%A0root%E6%9D%83%E9%99%90)/index.html">
 <meta property="og:site_name" content="Mingchen&#39;s Blog">
 <meta property="og:description" content="在没有root权限的服务器(ubuntu22.04)上安装MySQL8.0，主要区别是不能使用sudo命令">
 <meta property="og:locale" content="zh_CN">
@@ -66,12 +66,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/blog/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
@@ -80,15 +80,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"lmc20020909.github.io","root":"/blog/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml"};
+    var CONFIG = {"hostname":"blog.mingchenliu.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/blog/js/utils.js" ></script>
-  <script  src="/blog/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
   
@@ -120,7 +120,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/blog/">
+    <a class="navbar-brand" href="/">
       <strong>Mingchen&#39;s Blog</strong>
     </a>
 
@@ -139,7 +139,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -151,7 +151,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -163,7 +163,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -175,7 +175,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -187,7 +187,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -309,7 +309,7 @@
                 
                 <h3 id="下载安装包">下载安装包</h3>
 <p>官网地址：<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310182201692.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230310182201692"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310182201692.png" srcset="/img/loading.gif" lazyload alt="image-20230310182201692"></p>
 <p>虽然服务器的系统是ubuntu22.04，但本人在网上所找到的所有教程无论是centos还是ubuntu系统都选择了Linux-Generic的版本进行下载。Generic不是某一操作系统，而是Linux通用的内核，所以一般适用于常见的Linux系统。</p>
 <p>查看内核版本命令：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /proc/version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
@@ -369,7 +369,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
 <figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> data<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
 <figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">touch</span> mysql.pid mysql.sock mysql.log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
 <p>将support-files文件夹下三个配置文件中的路径修改为自己的对应位置（默认在/usr/local中）<br>
-<img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310194603582.png" srcset="/blog/img/loading.gif" lazyload alt="image-20230310194603582"></p>
+<img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310194603582.png" srcset="/img/loading.gif" lazyload alt="image-20230310194603582"></p>
 <h3 id="安装并启动mysql">安装并启动mysql</h3>
 <p>安装</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> bin
@@ -411,12 +411,12 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E6%95%99%E7%A8%8B/server/" class="category-chain-item">server</a>
+  <a href="/categories/%E6%95%99%E7%A8%8B/server/" class="category-chain-item">server</a>
   
   
 
@@ -433,13 +433,13 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/%E6%95%99%E7%A8%8B/">#教程</a>
+        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>
       
-        <a href="/blog/tags/server/">#server</a>
+        <a href="/tags/server/">#server</a>
       
-        <a href="/blog/tags/Linux/">#Linux</a>
+        <a href="/tags/Linux/">#Linux</a>
       
-        <a href="/blog/tags/MySQL/">#MySQL</a>
+        <a href="/tags/MySQL/">#MySQL</a>
       
     </div>
   
@@ -452,7 +452,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
   <div class="license-box my-3">
     <div class="license-title">
       <div>ubuntu22.04安装MySQL8.0(无root权限)</div>
-      <div>https://lmc20020909.github.io/blog/ubuntu22.04安装MySQL8.0(无root权限)/</div>
+      <div>https://blog.mingchenliu.com/ubuntu22.04安装MySQL8.0(无root权限)/</div>
     </div>
     <div class="license-meta">
       
@@ -496,7 +496,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/%E7%AE%80%E5%8D%95dp/" title="简单dp">
+                      <a href="/%E7%AE%80%E5%8D%95dp/" title="简单dp">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">简单dp</span>
                         <span class="visible-mobile">上一篇</span>
@@ -506,7 +506,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/ubuntu_mysql/" title="ubuntu22.04安装MySQL8.0并远程连接(有root权限)">
+                      <a href="/ubuntu_mysql/" title="ubuntu22.04安装MySQL8.0并远程连接(有root权限)">
                         <span class="hidden-mobile">ubuntu22.04安装MySQL8.0并远程连接(有root权限)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -638,8 +638,8 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/blog/js/events.js" ></script>
-<script  src="/blog/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -661,7 +661,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
 
 
   
-    <script  src="/blog/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -762,7 +762,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/blog/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -772,7 +772,7 @@ lower_case_table_names <span class="token operator">=</span> <span class="token 
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/blog/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   

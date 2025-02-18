@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/blog/img/icon/Mingchen%20Liu.png">
-  <link rel="icon" href="/blog/img/icon/Mingchen%20Liu.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon/Mingchen%20Liu.png">
+  <link rel="icon" href="/img/icon/Mingchen%20Liu.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="第二章——信息的表示和处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSAPP阅读札记——第二章">
-<meta property="og:url" content="https://lmc20020909.github.io/blog/CSAPP%E9%98%85%E8%AF%BB%E6%9C%AD%E8%AE%B0%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
+<meta property="og:url" content="https://blog.mingchenliu.com/CSAPP%E9%98%85%E8%AF%BB%E6%9C%AD%E8%AE%B0%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Mingchen&#39;s Blog">
 <meta property="og:description" content="第二章——信息的表示和处理">
 <meta property="og:locale" content="zh_CN">
@@ -64,12 +64,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/blog/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
@@ -78,15 +78,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"lmc20020909.github.io","root":"/blog/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml"};
+    var CONFIG = {"hostname":"blog.mingchenliu.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/blog/js/utils.js" ></script>
-  <script  src="/blog/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
   
@@ -118,7 +118,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/blog/">
+    <a class="navbar-brand" href="/">
       <strong>Mingchen&#39;s Blog</strong>
     </a>
 
@@ -137,7 +137,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -149,7 +149,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -161,7 +161,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -173,7 +173,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -185,7 +185,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -323,7 +323,7 @@
 </blockquote>
 <p>大多数64位机器可以运行为32位机器编译的程序。</p>
 <h3 id="C语言数据类型大小（32位-64位）">C语言数据类型大小（32位/64位）</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230423175903299.png" srcset="/blog/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230423175903299.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <h2 id="小端法和大端法">小端法和大端法</h2>
 <p><strong>小端法（little endian)</strong>：最低有效字节存放在最前面（低地址）</p>
 <p><strong>大端法（big endian)</strong>：最高有效字节存放在最前面（低地址）</p>
@@ -463,12 +463,12 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E6%9C%AD%E8%AE%B0/" class="category-chain-item">札记</a>
+  <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="category-chain-item">札记</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E6%9C%AD%E8%AE%B0/CSAPP/" class="category-chain-item">CSAPP</a>
+  <a href="/categories/%E6%9C%AD%E8%AE%B0/CSAPP/" class="category-chain-item">CSAPP</a>
   
   
 
@@ -485,9 +485,9 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/%E6%9C%AD%E8%AE%B0/">#札记</a>
+        <a href="/tags/%E6%9C%AD%E8%AE%B0/">#札记</a>
       
-        <a href="/blog/tags/CSAPP/">#CSAPP</a>
+        <a href="/tags/CSAPP/">#CSAPP</a>
       
     </div>
   
@@ -500,7 +500,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
   <div class="license-box my-3">
     <div class="license-title">
       <div>CSAPP阅读札记——第二章</div>
-      <div>https://lmc20020909.github.io/blog/CSAPP阅读札记——第二章/</div>
+      <div>https://blog.mingchenliu.com/CSAPP阅读札记——第二章/</div>
     </div>
     <div class="license-meta">
       
@@ -544,7 +544,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/wordNet/" title="WordNet使用简介">
+                      <a href="/wordNet/" title="WordNet使用简介">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">WordNet使用简介</span>
                         <span class="visible-mobile">上一篇</span>
@@ -554,7 +554,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" title="基础算法">
+                      <a href="/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" title="基础算法">
                         <span class="hidden-mobile">基础算法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -686,8 +686,8 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/blog/js/events.js" ></script>
-<script  src="/blog/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -709,7 +709,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 
 
   
-    <script  src="/blog/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -810,7 +810,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/blog/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -820,7 +820,7 @@ c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></spa
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/blog/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   
