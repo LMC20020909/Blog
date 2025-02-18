@@ -30,10 +30,12 @@ jobs:
         run: |
           hexo clean
           hexo generate
-      
+
+      - name: Create CNAME file
+        run: echo 'blog.mingchenliu.com' > ./public/CNAME
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          
