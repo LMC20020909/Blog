@@ -16,15 +16,7 @@ jobs:
       # from: https://github.com/actions/checkout
       - name: Checkout Repository
         uses: actions/checkout@v2
-      #   with:
-      #     fetch-depth: 0
 
-      # - name: Restore file modification time
-      #   run: |
-      #     git config --global core.quotepath false
-      #     find source -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
-
-      # from: https://github.com/actions/setup-node
       - name: Setup Node.js
         uses: actions/setup-node@main
 
@@ -33,22 +25,13 @@ jobs:
           npm install hexo-cli -g
           npm install
 
-      - name: Setup Deploy Private Key
-        env:
-          HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY_DELL_RSA }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa 
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - name: Setup Git Infomation
-        run: |
-          git config --global user.name 'lmc20020909' 
-          git config --global user.email '2724905898@qq.com'
-
-      - name: Deploy Hexo
+      - name: Generate public folder
         run: |
           hexo clean
-          hexo generate 
-          hexo deploy
+          hexo generate
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
