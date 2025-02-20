@@ -5,8 +5,8 @@ updated: 2022-11-23 10:27:25
 categories: [教程, git]
 tags: [教程, git, github]
 excerpt: 防止自己总忘，干脆总结一下
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
 ---
 
 ## 将远程仓库克隆到本地

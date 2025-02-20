@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 categories: bug
 tags: [bug, git, github]
 excerpt: 突然git push不上去了...
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg6.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg6.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg6.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg6.jpg
 ---
 
 &emsp;&emsp;今天git push的时候突然给我报了一些诡异的错误，按照以往的经验，git不上去通常是网络问题。然而当时校园网已经断了，而不知道为什么我用手机热点无法访问github，提示我不是私密链接，输入了“thisisunsafe”也不行，只有科学上网才行。于是我用@hust的方式续了续校园网，发现github能访问了，但还是git不上去。 而且在我一顿操作后，居然要我输入用户名和密码。我赶紧重新配置了一下：

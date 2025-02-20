@@ -4,8 +4,8 @@ date: 2023-08-07 13:45:04
 updated: 2023-08-07 13:45:04
 categories: [教程, server]
 tags: [教程, server,frp,jupyter]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230807_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230807_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230807_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230807_bg1.jpg
 ---
 
 通过具有公网ip的跳板机访问内网服务器

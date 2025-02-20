@@ -5,8 +5,8 @@ updated: 2024-12-16
 excerpt: conda 问题汇总，如切换默认环境、终端显示问题等
 categories: [bug]
 tags: [bug,conda,python]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241216_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241216_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241216_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241216_bg1.jpg
 ---
 
 ### 删除环境

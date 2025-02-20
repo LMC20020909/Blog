@@ -5,8 +5,8 @@ updated: 2022-11-27 22:17:32
 categories: [教程, font-end]
 tags: [教程, font-end, 笔记, html, css]
 excerpt: Consolidate the foundation of html5
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg8.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg8.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg8.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg8.jpg
 ---
 
 ### use semantic tags(no visual effect)

@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 categories: [课业, 数字图像处理]
 tags: [课业, 数字图像处理, 笔记, 复习]
 excerpt: 第三章 图像基本运算与灰度变换 薛志东老师 2022.10.26
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg5.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg5.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg5.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg5.jpg
 ---
 
 ### 第三章 图像基本运算与灰度变换
@@ -35,9 +35,9 @@ $f(x,y) = ax+by+cxy+d$
 
 
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con1.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con1.png)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con2.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con2.png)
 
 **先线性插值算出$x_0,x_1$**，再线性插值算出$f(x,y)$
 
@@ -60,7 +60,7 @@ $s=clog(1+r)$
 + 扩展图像中的暗像素值，同时压缩更高灰度级的值（幂律变换更适用）
 + 反对数变换的作用与此相反
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con3.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con3.png)
 
 ##### 幂次变换
 
@@ -68,13 +68,13 @@ $s=cr^\gamma$
 
 + 用于校正幂次响应现象的过程叫做伽马校正
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con4.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con4.png)
 
 ##### 对比度拉伸
 
 扩展图像灰度级动态范围
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con5.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con5.png)
 
 ##### 比特平面分层（位图切割）
 
@@ -83,7 +83,7 @@ $s=cr^\gamma$
 + 显示一幅8比特图像的第8个比特平面：用阈值灰度变换函数将0-127的灰度映射为0，将128-255之间的灰度映射为1
 + 图像重建：使用第n个平面的像素（0 or 1）左移n-1位，然后相加
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con6.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con6.png)
 
 
 
@@ -97,7 +97,7 @@ $s=cr^\gamma$
 
 $s=T(r)=(L-1)\int_0^rp_r(w)dw$，$\int_0^rp_r(w)dw$为$r$的累积分布函数
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con7.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221026_con7.png)
 
 + 图片中为8bit图像
 + 为了增加对比度，不对最小灰度级进行改变

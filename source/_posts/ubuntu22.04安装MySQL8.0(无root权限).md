@@ -5,15 +5,15 @@ updated: 2023-03-10 18:19:27
 categories: [教程, server]
 tags: [教程, server,Linux,MySQL]
 excerpt: 在没有root权限的服务器(ubuntu22.04)上安装MySQL8.0，主要区别是不能使用sudo命令
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg1.jpg
 ---
 
 ### 下载安装包
 
 官网地址：https://downloads.mysql.com/archives/community/
 
-![image-20230310182201692](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310182201692.png)
+![image-20230310182201692](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310182201692.png)
 
 虽然服务器的系统是ubuntu22.04，但本人在网上所找到的所有教程无论是centos还是ubuntu系统都选择了Linux-Generic的版本进行下载。Generic不是某一操作系统，而是Linux通用的内核，所以一般适用于常见的Linux系统。
 
@@ -110,7 +110,7 @@ mkdir data
 touch mysql.pid mysql.sock mysql.log
 ```
 将support-files文件夹下三个配置文件中的路径修改为自己的对应位置（默认在/usr/local中）
-![image-20230310194603582](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310194603582.png)
+![image-20230310194603582](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230310194603582.png)
 
 ### 安装并启动mysql
 

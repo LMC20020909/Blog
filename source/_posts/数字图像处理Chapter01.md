@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 categories: [课业, 数字图像处理]
 tags: [课业, 数字图像处理, 笔记, 复习]
 excerpt: 第一章 绪论 薛志东老师 2022.10.24
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg3.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg3.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg3.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg3.jpg
 ---
 
 ### 第一章  绪论
@@ -26,13 +26,13 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg
 
 #### 亮度函数
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221024_con1.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221024_con1.png)
 
 + 物体的亮度特征主要取决于反射光
 
 #### 亮度函数、入射分量、反射分量
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221024_con2.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221024_con2.png)
 
 亮度函数中(x,y,z)是像素的空间坐标，λ是波长，t是时间，I是像素的强度。代表一幅运动的(t)彩色的(λ)立体的(x,y,z)图像。
 

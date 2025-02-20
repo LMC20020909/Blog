@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 categories: [课业, 数字图像处理]
 tags: [课业, 数字图像处理, 笔记, 复习]
 excerpt: 第四章 线性运算与空间图像增强 薛志东老师 2022.10.27
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg7.jpg
 ---
 
 ### 第四章 线性运算与空间图像增强

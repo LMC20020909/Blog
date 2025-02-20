@@ -4,8 +4,8 @@ date: 2023-04-28 12:32:29
 updated: 2023-04-28 12:32:29
 categories: [教程, NLP]
 tags: [教程, NLP, WordNet]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230428_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230428_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230428_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230428_bg1.jpg
 ---
 
 > WordNet is a large lexical database of English. Nouns, verbs, adjectives and adverbs are grouped into sets of cognitive synonyms (synsets), each expressing a distinct concept.

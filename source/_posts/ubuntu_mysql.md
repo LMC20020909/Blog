@@ -5,8 +5,8 @@ updated: 2023-03-08 19:40:39
 categories: [教程, server]
 tags: [教程, server,Linux,MySQL]
 excerpt: 在腾讯云服务器(ubuntu22.04)上安装MySQL8.0，在本地用navicat远程连接
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230308_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230308_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230308_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230308_bg1.jpg
 ---
 ### 安装MySQL
 
@@ -51,7 +51,7 @@ sudo mysql_secure_installation
 update mysql.user set host='%' where user='root';
 ```
 
-![image-20230308200034784](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230308200034784.png)
+![image-20230308200034784](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230308200034784.png)
 ```bash
 grant all on *.* to 'root'@'%';	//授予root用户所有权限
 ```
@@ -69,7 +69,7 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 >
 > port = 3306	//修改为你想为mysql配置的端口
 
-![image-20230308200318810](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230308200318810.png)
+![image-20230308200318810](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230308200318810.png)
 
 **一定要重启mysql才能生效**！
 

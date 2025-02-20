@@ -5,8 +5,8 @@ updated: 2024-12-15
 excerpt: Pytorch 安装指定版本，然官方下载链接太慢
 categories: [教程,server]
 tags: [教程,server,pytorch,python,pip]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg2.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg2.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg2.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg2.jpg
 ---
 
 我们都知道安装 pytorch 需要根据机器的 cuda 版本相对应，我们也知道在国内使用 pip 安装的时候最好进行换源以加快下载速度。正常的安装方式应该是：

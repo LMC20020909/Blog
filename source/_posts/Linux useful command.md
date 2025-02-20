@@ -5,8 +5,8 @@ updated: 2024-12-16
 excerpt: Linux 有用且有趣的命令汇总，如检测 gpu 状态、查看空间大小等
 categories: [教程,server]
 tags: [教程,server,linux]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg
 ---
 
 #### watch 命令

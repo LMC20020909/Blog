@@ -5,8 +5,8 @@ updated: 2024-03-31 16:40:32
 categories: [教程,Docker]
 tags: [教程,Docker]
 excerpt: Docker 的一些命令和概念
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240331_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240331_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240331_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240331_bg1.jpg
 ---
 
 # 基本概念

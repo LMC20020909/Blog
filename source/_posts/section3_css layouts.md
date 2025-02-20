@@ -5,8 +5,8 @@ updated: 2022-12-08 19:11:09
 categories: [教程, font-end]
 tags: [教程, font-end, html, css, flex, css grid, floats]
 excerpt: three kinds of css layouts——floats, flex, css grid
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg10.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg10.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg10.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg10.jpg
 ---
 
 ## CSS布局
@@ -26,7 +26,7 @@ float: right;
 
 浮动元素会从普通文档流中脱离，但浮动元素不同于`absolute positioning`，它会影响周围的元素进行环绕。让block元素无视float元素，让inline元素围绕着float元素。
 
-![image-20221208192302026](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20221208192302026.png)
+![image-20221208192302026](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20221208192302026.png)
 
 ### Height Collapse 高度崩塌
 
@@ -89,7 +89,7 @@ display: flex;
 
 接着可以针对不同需求设置不同的属性：
 
-![image-20221208194706220](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20221208194706220.png)
+![image-20221208194706220](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20221208194706220.png)
 
 如图所示，左侧为父容器可以设置的属性，右侧为并排放置的元素(flex items)的属性。
 
@@ -144,7 +144,7 @@ flex: 1
 display: grid;
 ```
 
-![image-20221208201541149](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20221208201541149.png)
+![image-20221208201541149](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20221208201541149.png)
 
 ### 常用属性
 

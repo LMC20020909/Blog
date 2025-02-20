@@ -5,8 +5,8 @@ updated: 2024-12-15
 excerpt: Tmux 常用操作命令汇总
 categories: [教程,server]
 tags: [教程,server,tmux]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg1.jpg
 ---
 
 # Intro

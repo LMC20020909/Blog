@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 categories: [课业, 计算机组成原理]
 tags: [课业, 计算机组成原理,笔记]
 excerpt: 计算机中的数据表示方法 黄浩老师 2022.10.16
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg1.jpeg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg1.jpeg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg1.jpeg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg1.jpeg
 ---
 
 ### 求负数补码
@@ -18,7 +18,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg
 
 移码只用于定点整数的表示，用于表示浮点数的阶码。**移码和补码符号位相反，数值位相同（偏移量为$2^n$时）**。
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con1.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con1.png)
 
 补码0的表示唯一，多余的编码100...0在定点小数中表示-1，在定点整数中表示$-2^n$
 如在四位整数中，原码最小为1111，表示-7，而**补码1000表示-8**
@@ -55,7 +55,7 @@ M(Mantissa)：尾数，定点尾数
 
 ### IEEE754格式
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con2.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con2.png)
 
 32位标准：
 $$
@@ -72,8 +72,8 @@ x=(-1)^S\times (1.M)\times 2^{E-127}
 $$
 **127的二进制：01111111**
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con3.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con3.png)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con4.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con4.png)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con5.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221022_con5.png)

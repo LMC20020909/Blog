@@ -6,8 +6,8 @@ subtitle: 第四章 进程管理和通信
 excerpt: 2020级操作系统原理 苏曙光老师 2022.5.19 第四章 进程管理和通信
 categories: [课业, 操作系统原理]
 tags: [课业, 操作系统原理,复习,笔记]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg4.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg4.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg4.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg4.jpg
 ---
 
 ## 进程概念
@@ -55,7 +55,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg
 3. 运行$\rightarrow$阻塞：服务请求；等待信号
 4. 阻塞$\rightarrow$就绪：服务完成；信号来到
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con7.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con7.jpg)
 
 ### Linux进程的状态
 
@@ -68,7 +68,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg
 + **僵死态**：进程终止执行，释放大部分资源
 + **挂起态**：进程被挂起
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con8.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con8.jpg)
 
 ps aux命令显示进程状态
 
@@ -258,7 +258,7 @@ fork 为什么在子进程中没有再建立新的进程呢？新的进程的CS:
 
   
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con9.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con9.jpg)
 
 ### wait()阻塞进程
 
@@ -306,7 +306,7 @@ Sleep(int nSecond)
 
 ### 线程的状态变迁
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con10.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con10.jpg)
 
 + **单线程程序**：整个进程只有一个线程。Windows程序缺省创建一个线程（主线程，main线程）。
 + **多线程程序**：整个进程至少有2个线程。主线程和至少1个用户线程。
@@ -367,7 +367,7 @@ Sleep(int nSecond)
 
 上锁原语
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con11.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con11.jpg)
 
 #### 开锁操作
 
@@ -375,7 +375,7 @@ Sleep(int nSecond)
 
 开锁原语
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con12.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con12.jpg)
 
 #### 用锁机制访问临界区
 
@@ -415,7 +415,7 @@ Sleep(int nSecond)
   + 若S**大于或等于零**，该进程继续；
   + 若S**小于零**，该进程**阻塞**并加入到q中，转调度函数。
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con13.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con13.jpg)
 
 ### V操作的原理（V(S)）
 
@@ -424,7 +424,7 @@ Sleep(int nSecond)
   + 若S**大于零**，该进程**继续**；
   + 若S**小于或等于零**，该进程**继续**同时从q中**唤醒**一个进程。
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con14.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con14.jpg)
 
 ### P-V操作应用过程
 
@@ -450,11 +450,11 @@ Sleep(int nSecond)
 + 定义有意义的信号量S，并设置合适的**初值**（一般设为0或初始状态值）
   不合理的初值不仅达不到同步的目的，还会发生死锁
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con15.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con15.jpg)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con16.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con16.jpg)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con17.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con17.jpg)
 
 
 

@@ -5,8 +5,8 @@ updated: 2022-12-02 21:41:33
 categories: [教程, font-end]
 tags: [教程, font-end, 笔记, html, css]
 excerpt: Consolidate the foundation of css
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg9.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg9.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg9.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg9.jpg
 ---
 
 ## Introduce css to html file
@@ -76,7 +76,7 @@ nav div {
 
 ## priority(conflicts between selectors)
 
-![Screenshot_20221130_204517_tv.danmaku.bili](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/Screenshot_20221130_204517_tv.danmaku.bili.jpg)
+![Screenshot_20221130_204517_tv.danmaku.bili](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/Screenshot_20221130_204517_tv.danmaku.bili.jpg)
 
 ## selectors inheritance
 
@@ -152,7 +152,7 @@ a:active {
 
 ## CSS box model
 
-![Screenshot_20221201_170435_tv.danmaku.bili](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/Screenshot_20221201_170435_tv.danmaku.bili.jpg)
+![Screenshot_20221201_170435_tv.danmaku.bili](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/Screenshot_20221201_170435_tv.danmaku.bili.jpg)
 
 ## 页面居中
 

@@ -6,8 +6,8 @@ subtitle: 第二章 操作系统的硬件基础
 excerpt: 2020级操作系统原理 苏曙光老师 2022.5.19 第二章 操作系统的硬件基础
 categories: [课业, 操作系统原理]
 tags: [课业, 操作系统原理,复习,笔记]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg2.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg2.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg2.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg2.jpg
 ---
 
 *支持操作系统的最基本硬件结构：**CPU、内存、中断、时钟***
@@ -93,7 +93,7 @@ CPU的工作状态，对资源和指令使用权限的描述
 5. 恢复现场
 6. 中断返回
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con1.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con1.jpg)
 
 中断嵌套处理：高优先级打断低优先级中断服务
 

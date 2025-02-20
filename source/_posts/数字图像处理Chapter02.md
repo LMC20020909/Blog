@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 categories: [课业, 数字图像处理]
 tags: [课业, 数字图像处理, 笔记, 复习]
 excerpt: 第二章 数字图像基础 薛志东老师 2022.10.24
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg4.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg4.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg4.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg4.jpg
 ---
 
 ### 第二章 数字图像基础
@@ -44,7 +44,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg
 
 #### 主观颜色
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221024_con3.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221024_con3.png)
 
 $F_R,F_G,F_B$相同时，$P(\lambda)$不一定相同。
 

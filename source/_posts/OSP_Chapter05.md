@@ -6,8 +6,8 @@ subtitle: 第五章 资源分配与调度
 excerpt: 2020级操作系统原理 苏曙光老师 2022.5.19 第五章 资源分配与调度
 categories: [课业, 操作系统原理]
 tags: [课业, 操作系统原理,复习,笔记]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg5.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg5.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg5.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg5.jpg
 ---
 
 # 死锁
@@ -27,7 +27,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg
 + **系统资源有限**：资源数目不足以满足所有进程的需要，引起进程对资源的竞争而产生死锁
 + **并发进程的推进顺序不当**：进程在运行过程中，请求和释放资源的顺序不当，导致进程产生死锁
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con18.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con18.jpg)
 
 ## 死锁的必要条件
 

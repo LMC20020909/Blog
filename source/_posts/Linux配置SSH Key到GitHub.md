@@ -5,8 +5,8 @@ updated: 2023-01-07 21:50:57
 categories: [教程, server]
 tags: [教程, server, linux, git, github]
 excerpt: 总体上和windows差不多，但出了点小问题。
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg12.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg12.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg12.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221022_bg12.jpg
 ---
 
 ## Git本地环境配置

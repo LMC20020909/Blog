@@ -5,8 +5,8 @@ updated: 2024-04-07 20:06:33
 categories: [教程, git]
 tags: [教程, git, MIT-Missing-Semester]
 excerpt: MIT-Missing-Semester Lecture 6 - Version Control(git)(2020)
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240407_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240407_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240407_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20240407_bg1.jpg
 ---
 
 Version control systems (VCSs) are tools used to track changes to source code (or other collections of files and folders). As the name implies, these tools help maintain a history of changes; furthermore, they facilitate collaboration. VCSs track changes to a folder and its contents in a series of snapshots, where each snapshot encapsulates the entire state of files/folders within a top-level directory. VCSs also maintain metadata like who created each snapshot, messages associated with each snapshot, and so on.

@@ -6,8 +6,8 @@ subtitle: 第一章 绪论
 excerpt: 2020级操作系统原理 苏曙光老师 2022.5.19 第一章 绪论
 categories: [课业, 操作系统原理]
 tags: [课业, 操作系统原理,复习,笔记]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg1.jpg
 ---
 
 ## 操作系统的定义

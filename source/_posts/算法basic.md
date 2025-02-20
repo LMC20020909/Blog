@@ -5,8 +5,8 @@ updated: 2023-02-24 19:00:42
 categories: 算法
 tags: [算法]
 excerpt: 一些最最basic的东西
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg1.jpg
 ---
 
 ## 解算法题步骤

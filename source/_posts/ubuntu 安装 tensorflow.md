@@ -5,21 +5,21 @@ updated: 2023-12-23 11:58:01
 categories: [教程, server]
 tags: [教程, server, tensorflow, linux]
 excerpt: 轻松安装gpu版本
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20231223_bg2.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20231223_bg2.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20231223_bg2.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20231223_bg2.jpg
 ---
 
 # ubuntu 安装 tensorflow
 
 1. 查看系统CUDA版本
 
-   ![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps2@main//img/202312202306943.png)
+   ![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps2@main//img/202312202306943.png)
 
    
 
 2. 上官网查看CUDA版本对应的tensorflow版本以及python版本：https://www.tensorflow.org/install/source#gpu
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps2@main//img/202312202308089.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps2@main//img/202312202308089.png)
 
 需要安装2.15.0版本的tensorflow，并且python版本要在3.9-3.11之间（划重点），python版本对应不上会安装不了对应版本的tensorflow
 

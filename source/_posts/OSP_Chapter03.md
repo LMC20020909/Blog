@@ -6,8 +6,8 @@ subtitle: 第三章 用户界面
 excerpt: 2020级操作系统原理 苏曙光老师 2022.5.19 第三章 用户界面
 categories: [课业, 操作系统原理]
 tags: [课业, 操作系统原理,复习,笔记]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg3.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg3.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg3.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221003_bg3.jpg
 ---
 
 # 用户界面
@@ -19,7 +19,7 @@ OS提供给用户控制计算机的机制，又称**用户接口**
 + **操作界面**
 + **系统调用**
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con2.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con2.jpg)
 
 ## 操作界面
 
@@ -51,13 +51,13 @@ Shell是操作系统与用户交互的界面
   + 命令的输入缺省来自“键盘（文件0）”
   + 命令的输出（含错误）缺省送往“显示器（文件1,2）”
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con3.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con3.jpg)
 
 + 重定向操作
 
   把命令缺省的输入来源或输出方向修改为其他文件/设备
 
-  ![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con4.jpg)
+  ![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con4.jpg)
 
 + 管道
   + 特殊的重定向操作,程序的输出作为另一个程序的输入
@@ -105,7 +105,7 @@ Bash不区分变量类型
 + SVC：SuperVisor Call，访管指令
 + SVC是中断指令
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con5.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con5.jpg)
 
 ### 具体OS中系统调用的实现
 
@@ -128,7 +128,7 @@ AH/EAX=系统调用的编号：N
 + 系统调用通过软中断(INT 80H)向内核发出服务请求
 + 系统调用采用API方式向用户提供，遵循POSIX标准
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con6.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221003_con6.jpg)
 
 系统调用编号的声明。格式：$\#define\_NR\_CallName~~ID$
 

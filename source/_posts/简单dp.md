@@ -5,13 +5,13 @@ updated: 2023-03-13 22:23:58
 categories: 算法
 tags: [算法,c++,动态规划]
 excerpt: 如题
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg2.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg2.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg2.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg2.jpg
 ---
 
 ## 整体思路
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230313222229049.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230313222229049.png)
 
 
 
@@ -19,7 +19,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230310_bg
 
 ### [01背包](https://www.acwing.com/problem/content/2/)（组合数问题）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/01%E8%83%8C%E5%8C%85.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/01%E8%83%8C%E5%8C%85.png)
 
 #### 二维写法
 ```cpp
@@ -84,7 +84,7 @@ int main()
 
 ### [摘花生](https://www.acwing.com/problem/content/1017/)（走法问题）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/%E6%91%98%E8%8A%B1%E7%94%9F.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/%E6%91%98%E8%8A%B1%E7%94%9F.png)
 
 ```cpp
 #include <cstdio>
@@ -122,7 +122,7 @@ int main()
 
 ### [最长上升子序列](https://www.acwing.com/problem/content/897/)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/zc.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/zc.png)
 
 ```cpp
 #include <cstdio>
@@ -159,7 +159,7 @@ int main()
 
 ### [地宫取宝](https://www.acwing.com/problem/content/1214/)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/Screenshot_20230313_225158_com.acwing.app.acwing_app.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/Screenshot_20230313_225158_com.acwing.app.acwing_app.jpg)
 
 ```cpp
 #include <cstdio>

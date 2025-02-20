@@ -5,8 +5,8 @@ updated: 2022-11-14 16:26:51
 excerpt: 2020级数字逻辑 黄浩老师 2022.5.9
 categories: [课业, 数字逻辑]
 tags: [课业, 数字逻辑,复习,笔记]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221004_bg1.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221004_bg1.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221004_bg1.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221004_bg1.jpg
 ---
 
 ## 数字系统
@@ -190,7 +190,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20221004_bg
 -   NMOS管$U_{G}$低关高通
     PMOS管$U_{G}$高关低通
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con1.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con1.jpg)
 
 ### TTL与非门的主要外部特性参数
 
@@ -428,14 +428,14 @@ A和B相加产生的本位和：$A \oplus B$
 
 #### 次态真值表（例）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con2.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con2.jpg)
 
 #### 状态表（例）
 
 ##### Mealy型 Moore型
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con3.jpg)
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con4.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con3.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con4.jpg)
 
 ### 同步时序逻辑电路设计
 
@@ -455,7 +455,7 @@ A和B相加产生的本位和：$A \oplus B$
 
 -   作隐含表$\rightarrow$求最大等效类$\rightarrow$作最简状态表（将最简状态分别用a,b,c,d\...表示）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con5.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con5.jpg)
 
 ### 状态编码原则（相邻分配法）
 
@@ -470,21 +470,21 @@ A和B相加产生的本位和：$A \oplus B$
 -   输出相同，现态相邻
     *在每一种输入取值下均具有相同输出的现态应尽可能分配相邻的二进制代码*
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con6.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con6.jpg)
 
 ### 四种钟控触发器的激励表
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con7.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con7.jpg)
 
 ### 激励函数和输出函数真值表（例）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con8.jpg)![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con9.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con8.jpg)![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con9.jpg)
 
 序列检测器（用Moore型）和代码检测器（用Mealy型）
 
 ### 代码检测器的状态图（例）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con10.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con10.jpg)
 
 ### 同步电路设计的讨论
 
@@ -498,7 +498,7 @@ A和B相加产生的本位和：$A \oplus B$
 
 #### 无效状态表（例）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con11.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con11.jpg)
 
 ### 异步时序电路
 
@@ -550,7 +550,7 @@ A和B相加产生的本位和：$A \oplus B$
 
     -   四位二进制并行加法器T693
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con12.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con12.jpg)
 
 ### 译码器
 
@@ -570,7 +570,7 @@ A和B相加产生的本位和：$A \oplus B$
 T4138型3-8线译码器：每个输出都是 A2、A1和A0
 的最小项的反（$\overline{Y_{0}} = \overline{m_{0}}，\overline{Y_{1}} = \overline{m_{1}}，...$）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con13.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con13.jpg)
 
 ### 编码器
 
@@ -582,7 +582,7 @@ T4138型3-8线译码器：每个输出都是 A2、A1和A0
 
 -   任何时候只允许一个输入端为有效信号
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con14.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con14.jpg)
 
 #### 优先编码器
 
@@ -600,7 +600,7 @@ T4138型3-8线译码器：每个输出都是 A2、A1和A0
 
 -   例如，$I_0、I_2、I_3、I_5和I_7$均为1，$I_1、I_4和I_6$为0时，输出按优先级较高的$I_6$编码，即$Q_CQ_BQ_A = 001$
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con15.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con15.jpg)
 
 ### 多路选择器
 
@@ -610,15 +610,15 @@ T4138型3-8线译码器：每个输出都是 A2、A1和A0
 
 #### 四路数据选择器T580
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con16.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con16.jpg)
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con17.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con17.jpg)
 
 ### 多路分配器
 
 它是一种单输入、多输出组合逻辑部件，由选择控制变量决定输入从哪一路输出
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con18.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con18.jpg)
 
 ### 计数器
 
@@ -632,7 +632,7 @@ T4138型3-8线译码器：每个输出都是 A2、A1和A0
 
 #### 四位二进制同步可逆计数器T4193 
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con19.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con19.jpg)
 
 ### 寄存器
 
@@ -642,7 +642,7 @@ T4138型3-8线译码器：每个输出都是 A2、A1和A0
 
 #### 4位双向移位寄存器T1194
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con20.jpg)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/content/20221004_con20.jpg)
 
 
 

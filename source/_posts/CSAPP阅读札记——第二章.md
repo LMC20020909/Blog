@@ -5,8 +5,8 @@ updated: 2023-04-23 15:55:55
 excerpt: 第二章——信息的表示和处理
 categories: [札记, CSAPP]
 tags: [札记, CSAPP]
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg3.jpg
-banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg3.jpg
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg3.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg3.jpg
 ---
 
 ## 字长的概念
@@ -41,7 +41,7 @@ banner_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20230315_bg
 
 ### C语言数据类型大小（32位/64位）
 
-![](https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230423175903299.png)
+![](https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps//img/image-20230423175903299.png)
 
 
 ## 小端法和大端法

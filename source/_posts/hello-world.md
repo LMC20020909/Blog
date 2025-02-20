@@ -4,7 +4,7 @@ date: 2022-11-14 16:26:51
 updated: 2022-11-14 16:26:51
 categories: 博客
 tags: 博客
-index_img: https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20211203_bg2.png
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20211203_bg2.png
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
