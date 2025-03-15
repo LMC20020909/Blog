@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.mingchenliu.com/%E3%80%8A%E6%88%98%E5%9B%BD%E6%AD%A7%E9%80%94%E3%80%8B%E6%9C%AD%E8%AE%B0/</loc>
+    <lastmod>2025-03-13</lastmod>
+  </url>
+  <url>
     <loc>https://blog.mingchenliu.com/Linux%20useful%20command/</loc>
     <lastmod>2024-12-16</lastmod>
   </url>
@@ -145,11 +149,11 @@
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.mingchenliu.com/OSP_Chapter04/</loc>
+    <loc>https://blog.mingchenliu.com/OSP_Chapter05/</loc>
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.mingchenliu.com/OSP_Chapter05/</loc>
+    <loc>https://blog.mingchenliu.com/OSP_Chapter04/</loc>
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>

@@ -16,28 +16,27 @@
   <meta name="author" content="Liu Mingchen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux 有用且有趣的命令汇总，如检测 gpu 状态、查看空间大小等">
+    <meta name="description" content="从春秋到战国，是贵族统治的旁落，是君权的巩固，是社会阶层的打破，是礼崩乐坏的不加掩饰，是思想学说的不断繁荣，是大一统时代到来前的注脚">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 有用且有趣的命令汇总">
-<meta property="og:url" content="https://blog.mingchenliu.com/Linux%20useful%20command/index.html">
+<meta property="og:title" content="《战国歧途》札记">
+<meta property="og:url" content="https://blog.mingchenliu.com/%E3%80%8A%E6%88%98%E5%9B%BD%E6%AD%A7%E9%80%94%E3%80%8B%E6%9C%AD%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Mingchen&#39;s Blog">
-<meta property="og:description" content="Linux 有用且有趣的命令汇总，如检测 gpu 状态、查看空间大小等">
+<meta property="og:description" content="从春秋到战国，是贵族统治的旁落，是君权的巩固，是社会阶层的打破，是礼崩乐坏的不加掩饰，是思想学说的不断繁荣，是大一统时代到来前的注脚">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg">
-<meta property="article:published_time" content="2024-12-16T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-16T00:00:00.000Z">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250315_bg1.jpg">
+<meta property="article:published_time" content="2025-03-13T10:46:00.000Z">
+<meta property="article:modified_time" content="2025-03-13T12:38:00.000Z">
 <meta property="article:author" content="Liu Mingchen">
-<meta property="article:tag" content="教程">
-<meta property="article:tag" content="server">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="札记">
+<meta property="article:tag" content="历史，战国歧途">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250315_bg1.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Linux 有用且有趣的命令汇总 - Mingchen&#39;s Blog</title>
+  <title>《战国歧途》札记 - Mingchen&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,13 +214,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20241215_bg3.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250315_bg1.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Linux 有用且有趣的命令汇总"></span>
+            <span id="subtitle" data-typed-text="《战国歧途》札记"></span>
           
         </div>
 
@@ -232,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-16 00:00" pubdate>
-          2024年12月16日 凌晨
+        <time datetime="2025-03-13 10:46" pubdate>
+          2025年3月13日 上午
         </time>
       </span>
     
@@ -244,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          473 字
+          2.3k 字
         
       </span>
     
@@ -255,7 +254,7 @@
         
         
         
-          4 分钟
+          19 分钟
         
       </span>
     
@@ -301,36 +300,20 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux 有用且有趣的命令汇总</h1>
+            <h1 style="display: none">《战国歧途》札记</h1>
             
             
               <div class="markdown-body">
                 
-                <h4 id="watch-命令">watch 命令</h4>
-<p><code>watch</code> 是一个周期性执行程序，并将结果显示到终端上。该命令可以帮助用户监控任何命令的输出变化，这对于需要持续检测系统状态或者文件内容变化的情况非常有用。</p>
-<h5 id="基础命令格式">基础命令格式</h5>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">watch</span> <span class="token punctuation">[</span>选项<span class="token punctuation">]</span> 命令<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<p>这里的 <code>命令 </code>是指任何可以在shell中执行的命令或者脚本，而 <code>选项</code> 则可以用来定制 <code>watch</code> 命令的行为。</p>
-<h5 id="核心选项与参数">核心选项与参数</h5>
-<p><strong>更新频率</strong></p>
-<p>默认情况下，<code>watch</code> 每2秒刷新一次。但可以通过 <code>-n</code>  或 <code>--interval</code> 选项更改这个频率：</p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">watch</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> <span class="token function">ls</span> <span class="token parameter variable">-l</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<p>以上命令每1秒更新一次 <code>ls -l</code> 的输出。</p>
-<h5 id="用法示例">用法示例</h5>
-<p><strong>查看显卡运行状态</strong></p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">watch</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> gpustat <span class="token parameter variable">--cpu</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<p>P.S. 当然，查看显卡运行状态有更好用的工具：</p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> nvitop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">nvitop <span class="token parameter variable">-m</span> full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<h4 id="du-命令">du 命令</h4>
-<p><code>du</code> 命令用于显示目录或文件所占用的磁盘空间。全称为 <code>disk usage</code>。</p>
-<p><strong>查看指定目录的整体大小</strong></p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">du</span> <span class="token parameter variable">-sh</span> name/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<p><code>du -sh</code> 查看当前所在目录的大小</p>
-<p><strong>查看当前目录下的子目录和文件的大小</strong></p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">du</span> <span class="token parameter variable">-d</span> <span class="token number">1</span> <span class="token parameter variable">-h</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
-<p>-d 参数代表深度，1 就是只查看1层的子目录和文件，而不显示子目录中的信息。</p>
-<p><code>du -d 0 -h</code> 和 <code>du -sh</code> 等价</p>
+                <p>从春秋到战国，是贵族统治的旁落，是君权的巩固，是社会阶层的打破，是礼崩乐坏的不加掩饰，是思想学说的不断繁荣，是大一统时代到来前的注脚。</p>
+<p>标志着战国时代的开端的，是一个在春秋时代不可能出现的大事件：三家分晋。赵魏韩三家原本晋国的异性贵族，竟成功将姬姓的晋国瓜分。当然，正如司马光将周威烈王二十三年作为《资治通鉴》的起始一般，周王室对这三家诸侯的认可在政治意义和历史意义上也许比实际的分晋行为更加重要。对于三家分晋合法性的承认，不仅体现了周王室式微衰落至斯的无能与无奈，更标志着整个社会礼崩乐坏进程的开端。自此以往，更加肆无忌惮、不加掩饰的权利争夺成为了再正常不过的历史行为。</p>
+<p>周王朝八百年，延续到春秋战国，其政治体制是“分封制”，也就是一直被泛用为帝制代名词的”封建“一词。被分封的贵族不仅是地区的管理者，更是地主与政治领主，对领地有自治权，甚至可以有自己的军队。长此以往，贵族势力做大，开始威胁中央统治。周朝以及春秋时期，大多是分封同姓贵族，但历史证明同姓也会相残。于是君主采取分封异性贵族的方式，但三家分晋以及之后的田齐代姜无不证明了异性王谋反起来更加的肆无忌惮和冷酷无情。</p>
+<p>因此到了战国时代，君主们无不开始有意识的寻求加强君权统治的途径，这也正是历史发展到了这一阶段。春秋时代的长期战乱使得原先掌握知识的大夫阶层流入下层社会中，为了谋生开展平民教育；平民中的知识分子也由于各国的君王有意招揽非贵族的官吏来治理国家而在政治和社会地位上有了上升的渠道，成为了士，也因此有了”士大夫“这一称呼。旧有的社会阶级被打破，阶级流通加速，对于社会的进步无疑是件好事，但从历史片段来看，也会加剧社会的冲突与不稳定。站在君主的角度，寻求非贵族出身的人来代替原先的贵族治理国家是一件两全其美的事情。这些人没有多么深厚的家族背景，所谋求的也不过是经济地位上的提升。官吏的利益是与君主权力绑定在一起的，他们没有动机也没有能力做出谋反的事情来，反而他们会尽心尽力帮助君主巩固统治，削弱贵族的权力。</p>
+<p>战国七雄，齐楚燕韩赵魏秦，每个国家都曾有过自己的高光时代，每个国家也都在谋求变法，似乎君主们都意识到了陈旧的政治制度已无法适应新的社会环境，穷则变，变则通。但最终变得彻底的只有秦国，以至于其在十数年间横扫六国一统天下。战国时期的变法，虽形式和手段上各有不同，但其主旨都是要中央集权，削弱贵族势力。其形式上秦国做出了最有效、乃至一直影响着后世的重要一步：变”分封制“为”郡县制“。地方官吏仅仅是管理者，受中央约束和统治。然而，这在加强了中央政府行政能力与君权统治的同时，也滋生了官僚腐败的生长。官吏不再是地主，而是君主的打工人，其最大的目标是做出政绩，至于地方是否真的变好和其并无多大利益关系。这一点直到今天也是一个难解的命题。</p>
+<p>秦国变法最为成功，一直以来被认为是其能从春秋乃至战国初国力积弱、被中原五国鄙视的”蛮夷“一跃成为最强大的国家的最重要的因素。这虽然有着臣逢明主的原因，但也不得不认识到秦国有着其余六国都无法比拟的变法沃土。秦国大体位于今天的陕西省，被称为”关中“，崤山和函谷关让其有着地理优势，易守难攻，其余几国的合纵联军往往到了函谷关便停滞不前难以深入。但地势之优越往往与经济的繁荣难以共存。关中在当时与富庶二字沾不上边，这也是为什么三晋和乃至楚汉都不想在关中建都的原因。另外，秦国长期以来被中原五国所鄙视，被认为是蛮夷，在春秋时代，连其君主自身面对山东几国时甚至也表现出自卑。人民生活水平的低下、身份文化上的落后让其有着充足的求变与统一天下的动力。秦国也是受中原文化影响较小的一个，其国内的贵族力量并没有中原国家那么根深蒂固，因此商鞅可以采用严苛手段拔除贵族根脉，建立“耕战体系”，“废井田开阡陌”打破贵族土地垄断，用土地私有化推动生产力解放。虽然自己难逃被牺牲的命运，但这种手段并没有激起太大的社会冲突，反而成功将秦国改造成了在中央领导下的上下齐心一致对外的国家。若是这种手段放在中原五国当中，怕是会用力过猛而反噬自身。当然，秦国人的生活状态在其余几国看来是非常之悲惨的，甚至宁可被其他国家侵略也不愿做秦国人。由此可见，一个国家在经济、政治、文化等诸多方面处于底层，人民对现状十分不满时，往往就会伴随着中央的集权统治愈发强烈，向外发动战争的欲望越发高涨，正如一战后的德国。</p>
+<p>这一段历史也体现了几条影响深远、在后世被反复证明了的特征。一是在历史上，繁荣先进的文化和社会往往在军事力量上无法与贫瘠落后的”蛮夷“相比，因此总是出现有着落后的文化和社会制度的集团灭掉有着先进文化的国家的例子；二是做出丰功伟业的君王往往并非是什么好人或是所谓的仁君。打天下可以凭蛮力，与道德可以无关；守天下却要靠道德与制度。</p>
+<p>值得注意的一点是，战国时代人民对于国家的观念十分薄弱。像屈原那种反而是另类，更普遍的是在一个国家干的不顺心了，就另谋他就，即所谓的“择主而事”。像商鞅原名是卫鞅，本来是魏国人。忠君爱国作为文人的精神底线是在大一统国家出现之后才有的。这也许正是战国时君主们谋求一统天下的动机之一，没有君主会喜欢有着退路的官吏，“普天之下，莫非王土；率土之滨，莫非王臣”才是君主们的追求。</p>
+<p>《战国歧途》是一本小书，一本通俗的历史读物。它不按照编年记述，而是一章讲一个国家，既有对历史事件的讲述，也有对社会制度的剖析，更间杂作者对社会变革的深层原因的看法。能把战国这一段错综复杂的历史，用这样一本小书讲的有趣而又不失深度，对想要了解这块历史的朋友确实是值得一读。</p>
 
                 
               </div>
@@ -349,15 +332,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  <a href="/categories/%E6%9C%AD%E8%AE%B0/" class="category-chain-item">札记</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%95%99%E7%A8%8B/server/" class="category-chain-item">server</a>
-  
-  
-
   
 
       </span>
@@ -371,11 +347,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>
+        <a href="/tags/%E6%9C%AD%E8%AE%B0/">#札记</a>
       
-        <a href="/tags/server/">#server</a>
-      
-        <a href="/tags/linux/">#linux</a>
+        <a href="/tags/%E5%8E%86%E5%8F%B2%EF%BC%8C%E6%88%98%E5%9B%BD%E6%AD%A7%E9%80%94/">#历史，战国歧途</a>
       
     </div>
   
@@ -387,8 +361,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux 有用且有趣的命令汇总</div>
-      <div>https://blog.mingchenliu.com/Linux useful command/</div>
+      <div>《战国歧途》札记</div>
+      <div>https://blog.mingchenliu.com/《战国歧途》札记/</div>
     </div>
     <div class="license-meta">
       
@@ -400,7 +374,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年12月16日</div>
+          <div>2025年3月13日</div>
         </div>
       
       
@@ -432,18 +406,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E3%80%8A%E6%88%98%E5%9B%BD%E6%AD%A7%E9%80%94%E3%80%8B%E6%9C%AD%E8%AE%B0/" title="《战国歧途》札记">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">《战国歧途》札记</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/anaconda%20%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" title="conda 问题汇总">
-                        <span class="hidden-mobile">conda 问题汇总</span>
+                      <a href="/Linux%20useful%20command/" title="Linux 有用且有趣的命令汇总">
+                        <span class="hidden-mobile">Linux 有用且有趣的命令汇总</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
