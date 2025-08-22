@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.mingchenliu.com/%E4%B8%83%E6%97%A5%E6%9A%96/</loc>
+    <lastmod>2025-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://blog.mingchenliu.com/%E3%80%8A%E6%88%98%E5%9B%BD%E6%AD%A7%E9%80%94%E3%80%8B%E6%9C%AD%E8%AE%B0/</loc>
     <lastmod>2025-03-13</lastmod>
   </url>
@@ -145,11 +149,11 @@
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.mingchenliu.com/OSP_Chapter04/</loc>
+    <loc>https://blog.mingchenliu.com/OSP_Chapter03/</loc>
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.mingchenliu.com/OSP_Chapter03/</loc>
+    <loc>https://blog.mingchenliu.com/OSP_Chapter04/</loc>
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>
