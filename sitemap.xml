@@ -461,6 +461,15 @@
   </url>
   
   <url>
+    <loc>https://blog.mingchenliu.com/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86Chapter03/</loc>
+    
+    <lastmod>2022-11-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mingchenliu.com/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86Chapter04/</loc>
     
     <lastmod>2022-11-14</lastmod>
@@ -471,15 +480,6 @@
   
   <url>
     <loc>https://blog.mingchenliu.com/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C%E6%80%9D%E8%80%83%E9%A2%98/</loc>
-    
-    <lastmod>2022-11-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mingchenliu.com/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86Chapter03/</loc>
     
     <lastmod>2022-11-14</lastmod>
     
@@ -604,6 +604,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mingchenliu.com/tags/Docker/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mingchenliu.com/tags/server/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -612,13 +619,6 @@
   
   <url>
     <loc>https://blog.mingchenliu.com/tags/linux/</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mingchenliu.com/tags/Docker/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -807,13 +807,6 @@
   </url>
   
   <url>
-    <loc>https://blog.mingchenliu.com/tags/vim/</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.mingchenliu.com/tags/NLP/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -822,6 +815,13 @@
   
   <url>
     <loc>https://blog.mingchenliu.com/tags/WordNet/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mingchenliu.com/tags/vim/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1117,14 +1117,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mingchenliu.com/categories/%E6%95%99%E7%A8%8B/server/</loc>
+    <loc>https://blog.mingchenliu.com/categories/%E6%95%99%E7%A8%8B/Docker/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mingchenliu.com/categories/%E6%95%99%E7%A8%8B/Docker/</loc>
+    <loc>https://blog.mingchenliu.com/categories/%E6%95%99%E7%A8%8B/server/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
