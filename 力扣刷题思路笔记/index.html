@@ -1,0 +1,783 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon/Mingchen%20Liu.png">
+  <link rel="icon" href="/img/icon/Mingchen%20Liu.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Liu Mingchen">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="2026 重启刷题，记录做题思路，日拱一卒，持续更新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 刷题思路笔记">
+<meta property="og:url" content="https://blog.mingchenliu.com/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E6%80%9D%E8%B7%AF%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Mingchen&#39;s Blog">
+<meta property="og:description" content="2026 重启刷题，记录做题思路，日拱一卒，持续更新">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg3.jpg">
+<meta property="article:published_time" content="2026-03-15T22:56:00.000Z">
+<meta property="article:modified_time" content="2026-03-15T22:56:00.000Z">
+<meta property="article:author" content="Liu Mingchen">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="LeetCode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg3.jpg">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>LeetCode 刷题思路笔记 - Mingchen&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.mingchenliu.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Mingchen&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg3.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="LeetCode 刷题思路笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-03-15 22:56" pubdate>
+          2026年3月15日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">LeetCode 刷题思路笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>2026 为了找实习再一次捡起力扣，已经数不清是第几次重新开始刷题，过去的几次尝试都是坚持不了几天就放弃，导致每次都浅尝辄止，始终没能构建起属于自己的一套算法题思路和方法论。这种感觉就好比背单词每次都是 “abondon” “abondon” …，刷了忘忘了刷，久而久之这种看不到自己进步的挫败感就快把做算法题的兴趣和勇气都消耗殆尽。</p>
+<p>因此今年这又一次的重启力扣，决心不能做过算过。我相信文字是对抗遗忘最好的武器。因此本次将尽量记录下做过的每道题的思路，希望在不断积累中慢慢找到做算法题的感觉，这非一日之功，重点在于日拱一卒，不断重复。</p>
+<p>做算法题要有一种不卑不亢的心态，对于简单模版题，不必轻蔑；对于想不出来或调不出来的题，也不必自我否定。用理智对待这一过程：对于简单题是增加对模版的熟练度，对于难题更是学新东西的好机会。有时候做不出来直接学习题解，反而比自己死磕半天却“做过算过”更有价值。</p>
+<p>本次记录从 2026 年 3 月始，下面的每一道题都是在这个时间节点之后提交过的题目（之前刷过的不算）。但要切记不可为了记录而记录，避免陷入形式主义。</p>
+</blockquote>
+<h3 id="链表">链表</h3>
+<p>已刷：21 道</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></p>
+<p>第一种：最简单的方式是用哈希表，把第一个链表结点的引用都放进去，逐一遍历第二个，表中存在的第一个就是相交节点。时间复杂度 O(m+n)，空间复杂度是 O(n)；</p>
+<p>第二种：head1, head2 同时遍历两个链表，当走到空结点时换到另一个链表的头结点继续走，两个指针第一次相遇处就是相交的第一个结点（因为此时走的步数相同）。如果两个指针都为 None 说明不相交。时间复杂度 O(m+n)，空间复杂度 O(1).</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表</a></p>
+<p>模版题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/palindrome-linked-list/">234. 回文链表</a></p>
+<p>第一种：把链表元素放进一个列表中，然后判断 <code>nums == nums[::-1]</code>。时间复杂度 O(n)，空间复杂度 O(n)；</p>
+<p>第二种：先找到中间结点，再反转后半链表，最后用两个分别指向两个头结点的指针逐一判断。时间复杂度 O(n)，空间复杂度 O(1).</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表</a></p>
+<p>快慢指针，Floyd 判圈算法模版。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">142. 环形链表 II</a></p>
+<p>快慢指针，Floyd 判圈算法模版。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></p>
+<p>模版题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></p>
+<p>遍历两个链表，处理好进位即可。只要两个链表和进位有一个还没完就得继续新建结点。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第 N 个结点</a></p>
+<p>快慢指针。快指针先走 n 步，然后快慢指针一起走。详见模版。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">24. 两两交换链表中的节点</a></p>
+<p>方法一：递归，递归函数内处理两个结点的交换，后面的交由递归处理，递归返回后面处理完成后的新的头结点，再和前面连接。时间复杂度 O(n)，空间复杂度 O(n)；</p>
+<p>方法二：迭代，没什么特别的，设置一个 dummy，<code>prev, cur = dummy, head</code>，然后每次交换 cur 和 cur.next 两个结点，遍历一次即可完成。需要注意的是循环结束后可能有环，需要再额外处理一步。小心一点即可，可以画个图模拟一下。时间复杂度 O(n)，空间复杂度 O(1).</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-nodes-in-k-group/">25. K 个一组翻转链表</a></p>
+<p>基本操作是反转链表，循环条件改成 <code>for _ in range(k)</code>。反转链表的函数需要返回两个结点，第一个是反转后的头结点，第二个是下一轮需要处理的头结点，即第 k+1 个结点，也就是新的头结点在原来的下一个结点。在反转之前要先判断剩下的长度是否大于等于 k，如果小于 k 则不反转，直接返回 head 和 None.</p>
+<p>方法一：递归，递归函数内处理 k 个结点的反转，后面的交给递归；结束条件是当前的链表长度小于 k；递归函数返回反转后的头结点，这样当“归”到第0层返回的正好是都处理完成后的新的头结点。时间复杂度 O(n)，空间复杂度 O(n)；</p>
+<p>方法二：迭代，最简单的方式，新建一个 dummy，从头开始循环调用反转链表函数，把 cur 更新成反转链表函数的第二个返回值，直到第二个返回值为 None 说明处理完毕。时间复杂度 O(n)，空间复杂度 O(1).</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sort-list/">148. 排序链表</a></p>
+<p>基本操作是找中间结点和合并两个升序链表。</p>
+<p>仿照归并排序的分治：递归函数内先找中间结点，找完后要把中间结点前一个结点和中间结点断掉（为了后面合并的正确）；之后分别递归处理左链表和右链表，这样就得到两个有序链表，再合并即可。结束条件是 head 为 None 或 head.next 为 None（只有一个结点）。时间复杂度：O(nlogn)，空间复杂度 O(n).</p>
+<p>这种做法是自顶向下使用递归进行归并排序，还可以不用递归，自底向上进行归并，空间复杂度为 O(1). 但尚未掌握，<strong>亟需掌握！</strong></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并 K 个升序链表</a></p>
+<p>基本操作是合并两个升序链表。</p>
+<p>仍然是归并排序的分治思想：先递归处理排序前 k // 2 个链表，再递归处理后面的，这样就得到了两个升序链表，进行合并就好了。唯一要转换一下思维的是递归函数的输入是一个二维列表，即链表的列表，但只返回一个排好序的单链表。时间复杂度：O(Llogm)，其中 <em>m</em> 为 <em>lists</em> 的长度，<em>L</em> 为所有链表的长度之和；空间复杂度：O(logm).</p>
+<p>同 148，依然可以自底向上进行归并，优化空间复杂度，<strong>亟需掌握</strong>。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/">82. 删除排序链表中的重复元素 II</a></p>
+<p>普通的遍历。需要注意的是要删除所有重复数字的结点，一个不留，如果单纯判断 <code>cur.val == cur.next.val</code> 会漏掉一个。所以用一个 record 变量记录每次的重复数字，只要前后结点值相同或当前结点值等于 record，就删除当前结点。这样做注意，需要在循环结束后处理最后一个结点也要删除的情况。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-list/">61. 旋转链表</a></p>
+<p>把链表连成环，然后只要找到需要断掉的位置即可。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-the-middle-node-of-a-linked-list/">2095. 删除链表的中间节点</a></p>
+<p>找中间结点的前一个结点即可。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/odd-even-linked-list/">328. 奇偶链表</a></p>
+<p>分别维护奇数结点和偶数结点的 prev，在一次遍历中同时处理好这一对即可。最后把两个链表连上。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/">2130. 链表最大孪生和</a></p>
+<p>找中间结点，反转后半链表，双指针分别从左右两端遍历找最大值。同 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/palindrome-linked-list/">234. 回文链表</a> 。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素</a></p>
+<p>dummy 结点，遍历链表，删除结点。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/convert-binary-number-in-a-linked-list-to-integer/">1290. 二进制链表转整数</a></p>
+<p>遍历链表。值得注意的技巧是从最高位遍历到最低位去计算十进制数的方式。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list-ii/">92. 反转链表 II</a></p>
+<p>反转链表的变形，需要注意的是反转后的新链表与前后结点的连接逻辑。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></p>
+<p>快慢指针模版。</p>
+</li>
+</ul>
+<h3 id="二分">二分</h3>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
+      
+        <a href="/tags/LeetCode/">#LeetCode</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>LeetCode 刷题思路笔记</div>
+      <div>https://blog.mingchenliu.com/力扣刷题思路笔记/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Liu Mingchen</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年3月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E7%AE%97%E6%B3%95%E6%A8%A1%E7%89%88-2026/" title="算法题常用模版">
+                        <span class="hidden-mobile">算法题常用模版</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script  src="https://lib.baomitu.com/prism/1.28.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
