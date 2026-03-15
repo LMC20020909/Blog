@@ -5,8 +5,8 @@ updated: 2026-01-08 22:31:00
 categories: [教程, server]
 tags: [教程, server, vim]
 excerpt: 在 vscode 上安装了 vim 插件，尝试熟悉使用，尽量脱离鼠标操作
-index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250330_bg2.png
-banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250330_bg2.png
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg3.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg3.jpg
 ---
 
 o: 在下面建立空行进入插入模式

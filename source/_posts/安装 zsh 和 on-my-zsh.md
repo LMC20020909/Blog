@@ -5,8 +5,8 @@ updated: 2025-11-21 20:36:00
 categories: [教程, server]
 tags: [教程, server, zsh, oh-my-zsh]
 excerpt: 有/无 root 权限安装 zsh 和 oh-my-zsh
-index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250330_bg1.png
-banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20250330_bg1.png
+index_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg2.jpg
+banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260315_bg2.jpg
 ---
 
 ### 安装 zsh 和 oh-my-zsh
