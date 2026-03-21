@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          3.9k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          21 分钟
+          33 分钟
         
       </span>
     
@@ -312,7 +312,7 @@
 <p>本次记录从 2026 年 3 月始，下面的每一道题都是在这个时间节点之后提交过的题目（之前刷过的不算）。但要切记不可为了记录而记录，避免陷入形式主义。</p>
 </blockquote>
 <h3 id="链表">链表</h3>
-<p>已刷：21 道</p>
+<p>已刷：23 道</p>
 <ul>
 <li>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></p>
@@ -407,8 +407,95 @@
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></p>
 <p>快慢指针模版。</p>
 </li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lru-cache/">146. LRU 缓存</a></p>
+<p>经典面试题，两种写法，一种用 OrderedDict，另一种用双向链表手动实现。</p>
+<ul>
+<li>
+<p>第一种，用 collections.OrderedDict() 这一数据结构来维护 cache. OrderedDIct 就是一个有序的字典，并且可以 O(1) 的进行插入、删除、改变顺序等操作。提供了如下方法：</p>
+<ul>
+<li>
+<p><code>OrderedDict().move_to_end(key, last=True)</code> 表示将键为 key 的这一对移到最后，<code>last=False</code> 就会移到最前面；</p>
+</li>
+<li>
+<p><code>OrderedDict().popitem(last=True)</code> 表示删除当前的最后一个键值对，<code>last=False</code> 表示删除第一个；</p>
+</li>
+</ul>
+<p>其底层也是用一个双向链表+一个 key_to_node 的字典来维护实现的。</p>
+<p>对这题来说，可以令排前面的是最近用到的，因此每次使用或添加一个元素就把它移到第一个，如果超过容量就删除最后一个，这样就实现了 LRU.</p>
+</li>
+<li>
+<p>第二种是手动维护一个双向链表+字典来实现。字典存 key -&gt; node 的映射。使用双向链表的原因是可以 O(1) 实现删除结点，单链表的话还要遍历找到前一个结点。其它都是基本逻辑，唯一值得注意的地方时双链表的维护逻辑，有一种很方便优雅的方式：</p>
+<ul>
+<li>
+<p>初始化一个 dummy 结点，其 prev 和 next 都指向自己；</p>
+</li>
+<li>
+<p>插入结点（头插）：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">node<span class="token punctuation">.</span>prev <span class="token operator">=</span> dummy
+node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> dummy<span class="token punctuation">.</span><span class="token builtin">next</span>
+dummy<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> node
+node<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span>prev <span class="token operator">=</span> node<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+</li>
+<li>
+<p>删除结点：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">node<span class="token punctuation">.</span>prev<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> node<span class="token punctuation">.</span><span class="token builtin">next</span>
+node<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span>prev <span class="token operator">=</span> node<span class="token punctuation">.</span>prev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
+</li>
+</ul>
+<p>这样任何时候双向链表都能结成一个环，dummy.prev 指向尾结点，尾结点的 next 指向 dummy，即：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/LMC20020909/BlogMaps2@main//img/202603161643070.png" srcset="/img/loading.gif" lazyload alt=""><br>
+对于本题来说，将一个已经存在的结点移动到最前面的操作就可以分解为先删除，再头插。</p>
+<p>当然，这样做会导致环形链表，如果不想这样也可以用更常见的方式：用两个虚拟节点 head 和 tail 来维护。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/copy-list-with-random-pointer/">138. 随机链表的复制</a></p>
+<p>模拟题。</p>
+<ul>
+<li>方法一：遍历一次原链表，一遍遍历一遍新建结点，放在一个字典里。键是原结点，值是新结点（默认自定义类的对象是可哈希的）。之后再遍历原链表，利用字典连接每个结点的两个指针。空间复杂度 O(n)；</li>
+<li>方法二：遍历原链表，每遍历一个点就新建一个结点插在原结点后面。之后再次遍历链表，有这样的关系：<code>cur.next.random=cur.random.next</code>。最后再用两个指针把两条链表分开即可。空间复杂度 O(1)。</li>
+</ul>
+</li>
 </ul>
 <h3 id="二分">二分</h3>
+<p>已刷：6 题</p>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-insert-position/">35. 搜索插入位置</a></p>
+<p>模版题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">34. 在排序数组中查找元素的第一个和最后一个位置</a></p>
+<p>模版题。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></p>
+<p>将 mid 转换为在矩阵中的行列下标。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-in-rotated-sorted-array/">33. 搜索旋转排序数组</a></p>
+<p>一道好题。二分本质不是比大小，而是能够找到某种确定性的判断条件，每次减小搜索空间。本题只要能够写出 mid 和 target 分别在哪一段的几种情况即可。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/">153. 寻找旋转排序数组中的最小值</a></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-in-rotated-sorted-array/">33. 搜索旋转排序数组</a> 的简单版。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-a-2d-matrix-ii/">240. 搜索二维矩阵 II</a></p>
+<ul>
+<li>
+<p>第一种，对每一行或每一列进行一次二分。时间复杂度：O(mlogn) 或 O(nlogm)，空间复杂度 O(1)；</p>
+</li>
+<li>
+<p>第二种是更巧妙的做法，但不能算是二分了。从矩阵的右上角开始，如果当前右上角的值小于 target，那所在行就可以排除了；如果大于 target，那所在列可以排除；如果等于 target 就找到。如果到最后行或列都减没了也没找到那就是不存在。</p>
+<p>可以把这一二维矩阵看成以右上角为根的 BST，然后从根开始根据条件查找左右子树。</p>
+<p>时间复杂度：O(m+n)，空间复杂度：O(1).</p>
+</li>
+</ul>
+</li>
+</ul>
 
                 
               </div>
@@ -500,6 +587,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%80%92%E5%BD%92%E7%9A%84%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
