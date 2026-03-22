@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.9k 字
+          11k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          66 分钟
+          90 分钟
         
       </span>
     
@@ -618,6 +618,44 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
         <span class="token keyword">return</span> <span class="token number">0</span>
     <span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token builtin">max</span><span class="token punctuation">(</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 <p>这一类题的识别信号：如果题目在问“当前节点的答案依赖左右子树的答案”、“要先知道左右子树情况，再判断当前节点”、“返回某种子树信息给父节点”，一般优先想自底向上 DFS。</p>
+<h4 id="回溯">回溯</h4>
+<p>树上的回溯本质上就是：DFS + 路径状态维护 + 离开节点时恢复现场</p>
+<p>模板：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+
+    path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>   <span class="token comment"># 做选择</span>
+
+    <span class="token keyword">if</span> is_leaf<span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 收集答案</span>
+        <span class="token keyword">pass</span>
+
+    dfs<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+    dfs<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+
+    path<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>              <span class="token comment"># 恢复现场</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<p>例：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/path-sum-ii/">113. 路径总和 II</a></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">pathSum</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">,</span> targetSum<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    ans <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">,</span> res<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+
+        path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>left <span class="token keyword">and</span> <span class="token keyword">not</span> root<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> res <span class="token operator">+</span> root<span class="token punctuation">.</span>val <span class="token operator">==</span> targetSum<span class="token punctuation">:</span>
+                ans<span class="token punctuation">.</span>append<span class="token punctuation">(</span>path<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            dfs<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> res <span class="token operator">+</span> root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+            dfs<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> res <span class="token operator">+</span> root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+
+        path<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    dfs<span class="token punctuation">(</span>root<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ans<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 <h4 id="二叉搜索树（BST）">二叉搜索树（BST）</h4>
 <p>性质：</p>
 <ul>
@@ -683,7 +721,76 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
 <li><strong>高度（height）</strong>：从当前节点到叶子节点的最长路径长度，适合自底向上。</li>
 </ul>
 <p>深度是“从上往下传”，高度是“从下往上算”。</p>
-<h4 id="构造二叉树">构造二叉树</h4>
+<h4 id="根据前中后序构造二叉树">根据前中后序构造二叉树</h4>
+<p>在二叉树不含有重复元素的条件下：</p>
+<ul>
+<li>给定<strong>前序+中序</strong>，可以唯一确定一颗二叉树；</li>
+<li>给定<strong>中序+后序</strong>，可以唯一确定一颗二叉树；</li>
+<li>给定<strong>前序+后序</strong>，不能唯一确定。</li>
+</ul>
+<p>这种题的关键在于根据前中后序的性质，来确定左右子树的范围，从而得到子树的前中后序遍历。一旦左右子树的遍历顺序确定，这就变成了一个递归 dfs 的问题。</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">从前序与中序遍历序列构造二叉树</a></p>
+<p>子树前序的第一个元素是当前子树的根节点，找到根节点在中序中的位置，其前半部分就是左子树的中序，大小就是左子树的结点数。根据这一信息，左右子树的前序和中序就能确定下来了。</p>
+<p>因为每次递归都需要在中序遍历中查找根节点的下标，因此提前用哈希表处理好。</p>
+<p>传递区间下标时，规定为左闭右开<code>[left, right)</code>是最方便的。算区间大小就是 <code>right-left</code>，根据左端点和大小算右端点就是 <code>right=left+size</code>，同理 <code>left=right-size</code>，不用反复考虑 +1 -1 问题。使用 range 或列表切分时也可以直接 <code>range(left, right)</code> 和 <code>nums[left: right]</code>。</p>
+<p>模版如下：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>preorder<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> inorder<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    index <span class="token operator">=</span> <span class="token punctuation">&#123;</span>x<span class="token punctuation">:</span> i <span class="token keyword">for</span> i<span class="token punctuation">,</span> x <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>inorder<span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>pl<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> pr<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> il<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> ir<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token comment"># 左闭右开</span>
+        <span class="token keyword">if</span> pl <span class="token operator">==</span> pr<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        root <span class="token operator">=</span> preorder<span class="token punctuation">[</span>pl<span class="token punctuation">]</span>
+        idx <span class="token operator">=</span> index<span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+        left_size <span class="token operator">=</span> idx <span class="token operator">-</span> il
+        left <span class="token operator">=</span> dfs<span class="token punctuation">(</span>pl <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> pl <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> left_size<span class="token punctuation">,</span> il<span class="token punctuation">,</span> idx<span class="token punctuation">)</span>
+        right <span class="token operator">=</span> dfs<span class="token punctuation">(</span>pl <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> left_size<span class="token punctuation">,</span> pr<span class="token punctuation">,</span> idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> ir<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> TreeNode<span class="token punctuation">(</span>root<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>preorder<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>inorder<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/">从中序与后序遍历序列构造二叉树</a></p>
+<p>和前序+中序同理，根节点为当前后序遍历的最后一个元素，由此可以通过查找中序遍历得到左子数的大小，从而得到左右子树的两种遍历：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>inorder<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> postorder<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    index <span class="token operator">=</span> <span class="token punctuation">&#123;</span>x<span class="token punctuation">:</span> i <span class="token keyword">for</span> i<span class="token punctuation">,</span> x <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>inorder<span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>il<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> ir<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> pl<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> pr<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token comment"># 左闭右开</span>
+        <span class="token keyword">if</span> pl <span class="token operator">==</span> pr<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        root <span class="token operator">=</span> postorder<span class="token punctuation">[</span>pr <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+        idx <span class="token operator">=</span> index<span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+        left_size <span class="token operator">=</span> idx <span class="token operator">-</span> il
+        left <span class="token operator">=</span> dfs<span class="token punctuation">(</span>il<span class="token punctuation">,</span> idx<span class="token punctuation">,</span> pl<span class="token punctuation">,</span> pl <span class="token operator">+</span> left_size<span class="token punctuation">)</span>
+        right <span class="token operator">=</span> dfs<span class="token punctuation">(</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> ir<span class="token punctuation">,</span> pl <span class="token operator">+</span> left_size<span class="token punctuation">,</span> pr <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> TreeNode<span class="token punctuation">(</span>root<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>inorder<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>postorder<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/">根据前序和后序遍历构造二叉树</a></p>
+<p>这里和上面两种略有不同。由于根据前序和后序无法唯一确定二叉树结构，但此题要求随便生成一个合法的就可以。因此不妨规定对每个结点，都现有左孩子，再有右孩子，整棵树的形状“左对齐”。因此，在当前树的前序遍历中，根节点的下一个结点是根节点的左孩子。</p>
+<p>我们的核心目标并未发生变化，都是要通过某种方式确认左子树的大小，从而得到左右子树的两种遍历。在这里，我们可以在后序遍历中找到左孩子的位置，那么左子树的大小就是从后续遍历的开始到这个位置。这样核心信息就已经确定，剩下的就是计算下标了。</p>
+<p>需要注意的是，由于我们在递归中是通过当前前序遍历中的第二个元素来完成操作的，因此当到达叶子结点时（此时前序遍历只有一个元素），无法通过主流程完成操作，需要作为终止条件返回。</p>
+<p>同时，空结点的终止条件也不能少。叶子结点的边界条件只能覆盖左子树叶子结点的情况，但当没有右子树时，依然会遍历到空结点。</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">constructFromPrePost</span><span class="token punctuation">(</span>preorder<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> postorder<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> preorder<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">None</span>
+    index <span class="token operator">=</span> <span class="token punctuation">&#123;</span>x<span class="token punctuation">:</span> i <span class="token keyword">for</span> i<span class="token punctuation">,</span> x <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>postorder<span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>prel<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> prer<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> postl<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> postr<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> TreeNode<span class="token punctuation">:</span>
+        <span class="token comment"># 左闭右开，到空结点和叶子结点返回</span>
+        <span class="token keyword">if</span> prel <span class="token operator">==</span> prer<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        <span class="token keyword">if</span> prel <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">==</span> prer<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> TreeNode<span class="token punctuation">(</span>preorder<span class="token punctuation">[</span>prel<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        left_child <span class="token operator">=</span> preorder<span class="token punctuation">[</span>prel <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span>
+        idx <span class="token operator">=</span> index<span class="token punctuation">[</span>left_child<span class="token punctuation">]</span>
+        left_size <span class="token operator">=</span> idx <span class="token operator">-</span> postl <span class="token operator">+</span> <span class="token number">1</span>
+        left <span class="token operator">=</span> dfs<span class="token punctuation">(</span>prel <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> prel <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> left_size<span class="token punctuation">,</span> postl<span class="token punctuation">,</span> postl <span class="token operator">+</span> left_size<span class="token punctuation">)</span>
+        right <span class="token operator">=</span> dfs<span class="token punctuation">(</span>prel <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> left_size<span class="token punctuation">,</span> prer<span class="token punctuation">,</span> postl <span class="token operator">+</span> left_size<span class="token punctuation">,</span> postr <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> TreeNode<span class="token punctuation">(</span>preorder<span class="token punctuation">[</span>prel<span class="token punctuation">]</span><span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>preorder<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>postorder<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<ul>
+<li>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+<li>空间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
 <h4 id="最近公共祖先（LCA">最近公共祖先（LCA)</h4>
 <p>本质上是自底向上 DFS（后序）。</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> p<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">'TreeNode'</span><span class="token punctuation">:</span>
@@ -699,8 +806,9 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
     <span class="token keyword">return</span> left <span class="token keyword">or</span> right<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 <p>每次递归的含义是：当前子树是否找到 p 或 q？如果都找到了，当前根节点就是 LCA；如果只找到一个，那就返回交由父结点处理；如果一个都没找到，那就返回 None 告诉父结点这没有。</p>
 <p>虽然不同情况下递归函数返回的含义略有不同，但在这一模版下恰好是正确的。最终返回的就是 LCA。后序返回值表示：当前子树里是否包含目标节点，或者已经求出了答案。</p>
-<h4 id="回溯">回溯</h4>
-<h3 id="堆">堆</h3>
+<h3 id="数据结构">数据结构</h3>
+<h4 id="栈">栈</h4>
+<h4 id="堆">堆</h4>
 <h3 id="网格图">网格图</h3>
 <p>你可以用这句口诀：</p>
 <blockquote>
