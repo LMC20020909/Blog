@@ -64,13 +64,18 @@ banner_img: https://gcore.jsdelivr.net/gh/LMC20020909/BlogMaps@main/bg/20260322_
   ```
 
 
+
 ### 字符串格式化输出
 
 #### strip(), lstrip() 和 rstrip()
 
 #### 控制宽度、前后填充
 
+
+
 ### 不同方式的取整
+
+
 
 ### python 内置的几种二阶方法
 
@@ -97,3 +102,59 @@ for i in range(m):
             col[j] += 1
 ```
 
+#### list(zip(*grid)) 实现矩阵转置
+
+
+
+### 列表原地修改
+
+有时候题目要求原地修改某列表，如果我们想偷懒，开新空间处理最后再复制回去的话，那就不能简单地写 `nums1 = nums2`，需要写成 `nums1[:] = nums2`。
+
+```python
+nums1 = [1, 2, 3]
+nums2 = [4, 5, 6]
+nums1 = nums2 # 把 nums1 这一变量名绑定到 [4, 5, 6] 上
+nums1[:] = nums2 # 将 [1, 2, 3] 改成 [4, 5, 6]
+```
+
+
+
+### 找左右两边最大最小值
+
+
+
+### 无序数组找中位数
+
+实际上是 Top K 问题
+
+快速选择
+
+
+
+### Counter() 可以直接比较大小
+
+
+
+### 模运算恒等式
+
+(*a*+*b*)mod*m*=((*a*mod*m*)+(*b*mod*m*))mod*m*
+
+(*a*⋅*b*)mod*m*=((*a*mod*m*)⋅(*b*mod*m*))mod*m*
+
+(*a*−*b*)mod*m*=((*a*mod*m*)−(*b*mod*m*)+*m*)mod*m*
+
+https://leetcode.cn/discuss/post/3584387/fen-xiang-gun-mo-yun-suan-de-shi-jie-dan-7xgu/
+
+
+
+### 覆盖子串问题中的判断技巧
+
+
+
+### 怎样是“合法括号”字符串？
+
+
+
+### 位运算技巧
+
+https://leetcode.cn/discuss/post/3571304/cong-ji-he-lun-dao-wei-yun-suan-chang-ji-enve/
