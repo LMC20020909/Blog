@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.9k 字
+          4.1k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          33 分钟
+          35 分钟
         
       </span>
     
@@ -312,7 +312,7 @@
 <p>本次记录从 2026 年 3 月始，下面的每一道题都是在这个时间节点之后提交过的题目（之前刷过的不算）。但要切记不可为了记录而记录，避免陷入形式主义。</p>
 </blockquote>
 <h3 id="链表">链表</h3>
-<p>已刷：23 道</p>
+<p>已刷：25 道</p>
 <ul>
 <li>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></p>
@@ -457,6 +457,14 @@ node<span class="token punctuation">.</span><span class="token builtin">next</sp
 <li>方法一：遍历一次原链表，一遍遍历一遍新建结点，放在一个字典里。键是原结点，值是新结点（默认自定义类的对象是可哈希的）。之后再遍历原链表，利用字典连接每个结点的两个指针。空间复杂度 O(n)；</li>
 <li>方法二：遍历原链表，每遍历一个点就新建一个结点插在原结点后面。之后再次遍历链表，有这样的关系：<code>cur.next.random=cur.random.next</code>。最后再用两个指针把两条链表分开即可。空间复杂度 O(1)。</li>
 </ul>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list/">86. 分隔链表</a></p>
+<p>第一眼觉得是类似于 partition 的做法放在链表上做，但实际写下来发现交换逻辑很容易乱套。更简单的做法是将其分割成两个链表，分别串联小于 x 和大于等于 x 的结点，最后再把两个链表串起来。新建一个 small_dummy 和 big_dummy，然后逻辑跟合并两个升序链表差不多。要注意的是遍历的时候最好先把结点原先的 next 指向空，避免形成环。</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list-lcci/">面试题 02.04. 分割链表</a></p>
+<p>同 86。</p>
 </li>
 </ul>
 <h3 id="二分">二分</h3>

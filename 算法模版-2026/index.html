@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11k 字
+          13k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          90 分钟
+          109 分钟
         
       </span>
     
@@ -306,6 +306,7 @@
                 
                 <h3 id="排序">排序</h3>
 <h4 id="快速排序">快速排序</h4>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sort-an-array/">912. 排序数组</a></p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">partition</span><span class="token punctuation">(</span>nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> left<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> right<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
     <span class="token comment"># 随机找一个 pivot，放到应该的位置上，返回 pivot 的位置</span>
     k <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
@@ -350,6 +351,48 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
 <p>最坏情况是每次都选到区间的最小/最大值，导致递归调用树变成链表：f(n)=f(n-1)+O(n)；期望情况是 f(n)=2(fn/2)+O(n)</p>
 </blockquote>
 </li>
+</ul>
+<h5 id="三路快排">三路快排</h5>
+<p>三路快排是对原始快排的优化，主要区别在于经过一次划分后，小于 pivot 的在左边，等于 pivot 在中间，大于 pivot 在右边。这样一次划分之后，相同元素都被放到了正确位置上。优化了对有大量重复数字的数组的快排。</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">partition</span><span class="token punctuation">(</span>nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> left<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> right<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+    <span class="token comment"># 三路划分</span>
+    k <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+    pivot <span class="token operator">=</span> nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+    lt<span class="token punctuation">,</span> i<span class="token punctuation">,</span> gt <span class="token operator">=</span> left<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right
+    <span class="token keyword">while</span> i <span class="token operator">&lt;=</span> gt<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pivot<span class="token punctuation">:</span>
+            nums<span class="token punctuation">[</span>lt<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>lt<span class="token punctuation">]</span>
+            lt <span class="token operator">+=</span> <span class="token number">1</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">elif</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> pivot<span class="token punctuation">:</span>
+            nums<span class="token punctuation">[</span>gt<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>gt<span class="token punctuation">]</span>
+            gt <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> lt<span class="token punctuation">,</span> gt
+
+<span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>left<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> right<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> left <span class="token operator">>=</span> right<span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    lt<span class="token punctuation">,</span> gt <span class="token operator">=</span> self<span class="token punctuation">.</span>partition<span class="token punctuation">(</span>nums<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+    quick_sort<span class="token punctuation">(</span>left<span class="token punctuation">,</span> lt <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    quick_sort<span class="token punctuation">(</span>gt <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+ 
+<span class="token comment"># 使用</span>
+nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span>
+quick_sort<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<p>关于指针移动：</p>
+<ul>
+<li>
+<p>对于第一个分支：如果 lt &lt; i，那么 nums[lt] 一定等于 pivot；否则 lt == i. 由此在第一个分支中，要么自己和自己换，要么换过来的数一定等于 pivot，这两种情况 i 都可以直接加一；</p>
+</li>
+<li>
+<p>对于第二个分支：右边换过来的元素没被检查过，不确定大小，因此 i 不能加一，留给下一轮循环检查。</p>
+</li>
+</ul>
+<p>关于 partition 完成后：</p>
+<ul>
+<li><code> nums[:lt] &lt; pivot, nums[lt:gt+1] == pivot, nums[gt+1:] &gt; pivot</code></li>
 </ul>
 <h5 id="快速选择">快速选择</h5>
 <p>由于 partition 函数能够在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>r</mi><mo>−</mo><mi>l</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(r-l+1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 的时间内确定某个随机 pivot 在当前区间中的最终位置。利用这一点，可以在无序数组中查找第 <code>k</code> 小或第 <code>k</code> 大的元素，而不必完整排序。</p>
@@ -532,6 +575,14 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
 <li><code>bisect_right(nums, target)</code> 找的是第一个 &gt; target 的位置。也就是在一个递增数组中尝试去插入 target（尽量往右插）的插入位置下标。</li>
 </ul>
 <p>这两个函数的返回值可能越界，例如返回 n；并且对于有些二分答案的题目无法直接套用，不可过于依赖库函数。</p>
+<h3 id="滑动窗口">滑动窗口</h3>
+<p>只有满足单调性，才能用滑窗来做。即窗口变长或变小，与合法性的变化是单调的。如果随着窗口单调变化，一会合法一会不合法，那就要考虑别的做法了。</p>
+<h4 id="定长滑窗">定长滑窗</h4>
+<h4 id="不定长滑窗">不定长滑窗</h4>
+<h5 id="越短越合法-求最长">越短越合法/求最长</h5>
+<p>不断扩充右端点，在扩充的过程中更新答案，直到不合法。之后开始移动左端点缩小窗口，直到再次合法。</p>
+<h5 id="越长越合法-求最短">越长越合法/求最短</h5>
+<p>不断扩充右端点，直到合法。之后开始移动左端点缩小窗口，在缩的过程中更新答案，直到不合法。</p>
 <h3 id="二叉树">二叉树</h3>
 <p>二叉树定义：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
@@ -619,7 +670,7 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
     <span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token builtin">max</span><span class="token punctuation">(</span>maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> maxDepth<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 <p>这一类题的识别信号：如果题目在问“当前节点的答案依赖左右子树的答案”、“要先知道左右子树情况，再判断当前节点”、“返回某种子树信息给父节点”，一般优先想自底向上 DFS。</p>
 <h4 id="回溯">回溯</h4>
-<p>树上的回溯本质上就是：DFS + 路径状态维护 + 离开节点时恢复现场</p>
+<p>树上的回溯本质上就是：自顶向下 DFS + 路径状态维护 + 离开节点时恢复现场</p>
 <p>模板：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
@@ -656,6 +707,10 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
 
     dfs<span class="token punctuation">(</span>root<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> ans<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<ul>
+<li>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>. 每个结点会遍历一次，到叶子结点会进行一次复制数组操作，因此最坏情况下是 O(n^2)；</li>
+<li>空间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
 <h4 id="二叉搜索树（BST）">二叉搜索树（BST）</h4>
 <p>性质：</p>
 <ul>
@@ -765,7 +820,7 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
 
     <span class="token keyword">return</span> dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>inorder<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>postorder<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/">根据前序和后序遍历构造二叉树</a></p>
-<p>这里和上面两种略有不同。由于根据前序和后序无法唯一确定二叉树结构，但此题要求随便生成一个合法的就可以。因此不妨规定对每个结点，都现有左孩子，再有右孩子，整棵树的形状“左对齐”。因此，在当前树的前序遍历中，根节点的下一个结点是根节点的左孩子。</p>
+<p>这里和上面两种略有不同。由于根据前序和后序无法唯一确定二叉树结构，但此题要求随便生成一个合法的就可以。因此不妨规定对每个结点，都先有左孩子，再有右孩子，整棵树的形状“左对齐”。因此，在当前树的前序遍历中，根节点的下一个结点是根节点的左孩子。</p>
 <p>我们的核心目标并未发生变化，都是要通过某种方式确认左子树的大小，从而得到左右子树的两种遍历。在这里，我们可以在后序遍历中找到左孩子的位置，那么左子树的大小就是从后续遍历的开始到这个位置。这样核心信息就已经确定，剩下的就是计算下标了。</p>
 <p>需要注意的是，由于我们在递归中是通过当前前序遍历中的第二个元素来完成操作的，因此当到达叶子结点时（此时前序遍历只有一个元素），无法通过主流程完成操作，需要作为终止条件返回。</p>
 <p>同时，空结点的终止条件也不能少。叶子结点的边界条件只能覆盖左子树叶子结点的情况，但当没有右子树时，依然会遍历到空结点。</p>
@@ -808,8 +863,60 @@ quick_sort<span class="token punctuation">(</span><span class="token number">0</
 <p>虽然不同情况下递归函数返回的含义略有不同，但在这一模版下恰好是正确的。最终返回的就是 LCA。后序返回值表示：当前子树里是否包含目标节点，或者已经求出了答案。</p>
 <h3 id="数据结构">数据结构</h3>
 <h4 id="栈">栈</h4>
+<h4 id="单调栈">单调栈</h4>
+<p>十六字真言：</p>
+<p><strong>及时去掉无用数据，</strong><br>
+<strong>保证栈中元素有序。</strong></p>
 <h4 id="堆">堆</h4>
 <h3 id="网格图">网格图</h3>
+<h4 id="DFS">DFS</h4>
+<h4 id="BFS">BFS</h4>
+<h3 id="图论">图论</h3>
+<h4 id="DFS-2">DFS</h4>
+<h5 id="找连通块">找连通块</h5>
+<h5 id="判断是否有环">判断是否有环</h5>
+<h3 id="回溯-2">回溯</h3>
+<p>两种思路：</p>
+<ul>
+<li>
+<p>选或不选</p>
+</li>
+<li>
+<p>枚举选哪个</p>
+</li>
+</ul>
+<h4 id="子集型回溯">子集型回溯</h4>
+<h4 id="组合型回溯">组合型回溯</h4>
+<h3 id="动态规划">动态规划</h3>
+<p>很多动态规划问题，都可以先用记忆化搜索来理解和刻画。在 Python 中，这通常就是 <code>dfs + @cache</code>。当不同搜索路径会反复到达同一状态时，记忆化搜索就能避免重复计算，把原本指数级的搜索压缩为“每个状态只算一次”。</p>
+<p>从 dfs 的角度思考 dp 是一种很好的训练方式，它能帮助我们逐步理解：原问题是如何被拆分成子问题的，状态为什么要这样设计，以及动态规划相比暴力搜索到底优化在什么地方。可以说，对于很多动态规划问题，不带记忆化的纯 dfs 可以看作其“暴力解法”：它会在大量重复子问题上反复搜索（好比双重循环之于双指针）；而加入记忆化后，本质上已经是在做动态规划，只不过仍然保留了递归实现的形式。</p>
+<p>从这个角度看，动态规划并不是一种凭空出现的新技巧，而是对“重复子问题”的系统化处理。直观来讲，记忆化搜索是自顶向下地分解问题，先一路“递”到递归边界，再在“归”的过程中计算答案；而动态规划是自底向上，按顺序填表，省去了“递”的过程。二者本质相通，主要区别在于实现方式。</p>
+<p>理论上，记忆化搜索通常可以达到与动态规划相同的时间复杂度。但由于递归调用、缓存查询以及递归栈的存在，它的实际运行常数往往更大，空间消耗通常也更高；当递归层数过深时，还可能导致爆栈。因此，在能够写成递推的情况下，动态规划往往更加高效和稳定。</p>
+<p>在后面的题目中，我们会尽量先定义 dfs 的含义，写出记忆化搜索，再视情况改写为递推形式的动态规划。</p>
+<h4 id="前情提要：从-DFS-到记忆化搜索">前情提要：从 DFS 到记忆化搜索</h4>
+<h5 id="什么样的-DFS-能够转变为记忆化搜索？">什么样的 DFS 能够转变为记忆化搜索？</h5>
+<ol>
+<li>同一个状态会被不同路径重复到达；</li>
+<li>一旦状态确定，答案就唯一确定。</li>
+</ol>
+<h5 id="记忆化搜索中-DFS-的设计技巧">记忆化搜索中 DFS 的设计技巧</h5>
+<blockquote>
+<p>逐步理解 dfs：二叉树 dfs —&gt; 网格图 dfs —&gt; 回溯 —&gt; 记忆化搜索与动态规划</p>
+</blockquote>
+<p>虽然写个递归函数，在上面加上 <code>@cache</code> 似乎就变成记忆化搜索了。但要知道，<code>@cache</code> 不是灵丹妙药。dfs 的设计直接决定了记忆化能否起作用，进而决定了题目能否做对、能够达到最优时间复杂度。</p>
+<p>在 dfs 的设计上，我总结了以下几点经验：</p>
+<ol>
+<li><strong>尽量不要在 dfs 内部依赖或修改全局变量，而应把信息体现在递归参数或返回值中（回溯问题除外）；</strong></li>
+<li><strong>要求什么，dfs 就返回什么；能用返回值表达的信息，就尽量不要额外放进递归参数里；</strong></li>
+<li><strong>尽量让 dfs 返回子问题的答案，并在回溯时合并结果，而不是携带过多局部状态一路向下传递。</strong></li>
+</ol>
+<p>这样做有几个好处：</p>
+<ol>
+<li><strong>能迫使我们先想清楚自己写的 dfs 的定义：当前操作是什么、子问题是什么、状态该如何设计。这样在写的过程中，也更容易发现问题、简化状态、判断是否可以剪枝；</strong></li>
+<li><strong>有助于压缩状态维度。记忆化搜索的时间复杂度通常可以看作“状态数 × 单个状态的转移代价”，因此状态设计越精炼，缓存越有效；</strong></li>
+<li><strong>便于进一步改写成动态规划，从而更自然地理解动态规划为什么更优。</strong></li>
+</ol>
+<h3 id="区间贪心">区间贪心</h3>
 <p>你可以用这句口诀：</p>
 <blockquote>
 <p>🪟 滑动窗口：不对就缩<br>

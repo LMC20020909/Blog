@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          795 字
+          1.3k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          7 分钟
+          12 分钟
         
       </span>
     
@@ -367,6 +367,27 @@ col <span class="token operator">=</span> <span class="token punctuation">[</spa
         <span class="token keyword">if</span> 满足某条件<span class="token punctuation">:</span>
             row<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
             col<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<h4 id="list-zip-grid-实现矩阵转置">list(zip(*grid)) 实现矩阵转置</h4>
+<h3 id="列表原地修改">列表原地修改</h3>
+<p>有时候题目要求原地修改某列表，如果我们想偷懒，开新空间处理最后再复制回去的话，那就不能简单地写 <code>nums1 = nums2</code>，需要写成 <code>nums1[:] = nums2</code>。</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">nums1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+nums2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+nums1 <span class="token operator">=</span> nums2 <span class="token comment"># 把 nums1 这一变量名绑定到 [4, 5, 6] 上</span>
+nums1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums2 <span class="token comment"># 将 [1, 2, 3] 改成 [4, 5, 6]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<h3 id="找左右两边最大最小值">找左右两边最大最小值</h3>
+<h3 id="无序数组找中位数">无序数组找中位数</h3>
+<p>实际上是 Top K 问题</p>
+<p>快速选择</p>
+<h3 id="Counter-可以直接比较大小">Counter() 可以直接比较大小</h3>
+<h3 id="模运算恒等式">模运算恒等式</h3>
+<p>(<em>a</em>+<em>b</em>)mod<em>m</em>=((<em>a</em>mod<em>m</em>)+(<em>b</em>mod<em>m</em>))mod<em>m</em></p>
+<p>(<em>a</em>⋅<em>b</em>)mod<em>m</em>=((<em>a</em>mod<em>m</em>)⋅(<em>b</em>mod<em>m</em>))mod<em>m</em></p>
+<p>(<em>a</em>−<em>b</em>)mod<em>m</em>=((<em>a</em>mod<em>m</em>)−(<em>b</em>mod<em>m</em>)+<em>m</em>)mod<em>m</em></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/discuss/post/3584387/fen-xiang-gun-mo-yun-suan-de-shi-jie-dan-7xgu/">https://leetcode.cn/discuss/post/3584387/fen-xiang-gun-mo-yun-suan-de-shi-jie-dan-7xgu/</a></p>
+<h3 id="覆盖子串问题中的判断技巧">覆盖子串问题中的判断技巧</h3>
+<h3 id="怎样是“合法括号”字符串？">怎样是“合法括号”字符串？</h3>
+<h3 id="位运算技巧">位运算技巧</h3>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/discuss/post/3571304/cong-ji-he-lun-dao-wei-yun-suan-chang-ji-enve/">https://leetcode.cn/discuss/post/3571304/cong-ji-he-lun-dao-wei-yun-suan-chang-ji-enve/</a></p>
 
                 
               </div>
